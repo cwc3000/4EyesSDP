@@ -6,21 +6,33 @@ using UnityEngine.SceneManagement;
 public class buttonPress : MonoBehaviour
 {
     public GameObject objOpened;
+    private float clickNum;
+    public GameObject notif;
     //public GameObject file;
     // Start is called before the first frame update
     void Start()
     {
         objOpened.SetActive(false);
+        clickNum = 0f;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (clickNum == 0)
+        {
+            notif.SetActive(true);
+        }
+        else if (clickNum >= 1)
+        {
+            notif.SetActive(false);
+        }
     }
     public void open ()
     {
         objOpened.SetActive(true);
+        clickNum = clickNum + 1;
     }
     public void close ()
     {

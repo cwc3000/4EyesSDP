@@ -4,6 +4,7 @@ using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class dialogueManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class dialogueManager : MonoBehaviour
     {
         //Debug.Log("Starting convo with " + dialogue.name);
 
+        //StartCoroutine(waitSeconds());
         animator.SetBool("isOpen", true);
 
         nameText.text = dialogue.name;
@@ -68,6 +70,10 @@ public class dialogueManager : MonoBehaviour
         }
     }
 
+    IEnumerator waitSeconds()
+    {
+        yield return new WaitForSeconds(3);
+    }
 
     void EndDialogue()
     {
