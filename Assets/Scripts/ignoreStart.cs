@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class ignoreStart : MonoBehaviour
 {
-    public GameObject emailOpened;
+    public GameObject ignOpened;
+    GameObject homePage;
+    GameObject NYWN;
     // Start is called before the first frame update
     void Start()
     {
-        emailOpened.SetActive(true);
+        ignOpened.SetActive(true);
+        homePage = GameObject.FindGameObjectWithTag("home");
+        NYWN = GameObject.FindGameObjectWithTag("newsletter");
     }
 
     // Update is called once per frame
@@ -18,18 +22,31 @@ public class ignoreStart : MonoBehaviour
     }
     public void close()
     {
-        emailOpened.SetActive(false);
+        ignOpened.SetActive(false);
     }
     public void openAndClose()
     {
-        if (emailOpened.activeInHierarchy == true)
+        if (ignOpened.activeInHierarchy == true)
         {
-            emailOpened.SetActive(false);
+            ignOpened.SetActive(false);
         }
         else
         {
-            emailOpened.SetActive(true);
+            ignOpened.SetActive(true);
         }
 
+    }
+    public void browserHome()
+    {
+        homePage.SetActive(true);
+        NYWN.SetActive(false);
+    }
+    public void goNewsletter()
+    {
+        //homePage = GameObject.FindGameObjectWithTag("home");
+        //NYWN = GameObject.FindGameObjectWithTag("newsletter");
+        NYWN.SetActive(true);
+        homePage.SetActive(false);
+        
     }
 }

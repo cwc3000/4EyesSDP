@@ -8,6 +8,8 @@ public class buttonPress : MonoBehaviour
     public GameObject objOpened;
     private float clickNum;
     public GameObject notif;
+    GameObject homePage;
+    GameObject NYWN;
     //public GameObject file;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,8 @@ public class buttonPress : MonoBehaviour
         {
             notif.SetActive(false);
         }
+        homePage = GameObject.FindGameObjectWithTag("home");
+        NYWN = GameObject.FindGameObjectWithTag("newsletter");
     }
     public void open ()
     {
@@ -50,6 +54,13 @@ public class buttonPress : MonoBehaviour
             objOpened.SetActive(true);
         } 
         
+    }
+    public void browserHome()
+    {
+        //homePage = GameObject.FindGameObjectWithTag("home");
+        //NYWN = GameObject.FindGameObjectWithTag("newsletter");
+        objOpened.SetActive(true);
+        NYWN.SetActive(false);
     }
     public void logIn()
     {
