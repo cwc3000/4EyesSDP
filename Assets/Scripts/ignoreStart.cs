@@ -33,6 +33,12 @@ public class ignoreStart : MonoBehaviour
         if (ignOpened.activeInHierarchy == true && otherOne.activeInHierarchy == false)
         {
             ignOpened.SetActive(false);
+            //if (gameObject.tag == "webLoc")
+            //{
+            //    ignOpened.transform.position = new Vector3(0, 519.6f, 0);
+            //}
+                
+
         }
         //and if selected window appears on top while both selected and other windows are active, then close selected window
         else if (ignOpened.transform.GetSiblingIndex() > otherOne.transform.GetSiblingIndex() && ignOpened.activeInHierarchy == true && otherOne.activeInHierarchy == true)
@@ -43,6 +49,16 @@ public class ignoreStart : MonoBehaviour
         else
         {
             ignOpened.SetActive(true);
+            //if (gameObject.tag == "emailLoc")
+            //{
+            //    ignOpened.transform.position = new Vector3(0, 32.513f,0);
+            //}
+            //else if (gameObject.tag == "webLoc")
+            //{
+            //    ignOpened.transform.position = new Vector3(0, 519.6f, 0);
+            //}
+            
+            
             ignOpened.transform.SetAsLastSibling();
         }
 

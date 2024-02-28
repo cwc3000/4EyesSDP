@@ -53,6 +53,7 @@ public class buttonPress : MonoBehaviour
         else
         {
             objOpened.SetActive(true);
+            
             objOpened.transform.SetAsLastSibling();
         } 
         

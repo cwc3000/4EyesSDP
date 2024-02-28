@@ -9,6 +9,8 @@ TagManager:
   - home
   - newsletter
   - other
+  - emailLoc
+  - webLoc
   layers:
   - Default
   - TransparentFX

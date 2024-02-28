@@ -441,6 +441,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1632667343}
   animator: {fileID: 1520740077}
   textSpeed: 0.02
+  waitUntilOpen: {fileID: 1511050933}
 --- !u!4 &157103450
 Transform:
   m_ObjectHideFlags: 0
@@ -4094,7 +4095,7 @@ GameObject:
   - component: {fileID: 1063013080}
   m_Layer: 5
   m_Name: emailButton
-  m_TagString: Untagged
+  m_TagString: emailLoc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4132,7 +4133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4404,10 +4405,12 @@ MonoBehaviour:
   dialogue:
     name: Riley Chavez
     sentences:
-    - Sentence 1
-    - Sentence 2
+    - "*Sigh* I don\u2019t want to look at this anymore."
+    - "I can\u2019t believe they would suspend me when I\u2019m so close to solving
+      the case."
   playedOnce: 0
   delay: 3
+  waitUntilOpen: {fileID: 1511050933}
 --- !u!1 &1099690049
 GameObject:
   m_ObjectHideFlags: 0
@@ -5245,7 +5248,7 @@ GameObject:
   - component: {fileID: 1295245529}
   m_Layer: 5
   m_Name: Email
-  m_TagString: other
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5328,7 +5331,7 @@ GameObject:
   - component: {fileID: 1351706973}
   m_Layer: 5
   m_Name: webButton
-  m_TagString: Untagged
+  m_TagString: webLoc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7159,7 +7162,7 @@ GameObject:
   - component: {fileID: 1752432492}
   m_Layer: 5
   m_Name: webBrowser_drag
-  m_TagString: other
+  m_TagString: webLoc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8267,7 +8270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939993070}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ced32825d50000a4e80cb0196c73d323, type: 3}
   m_Name: 
@@ -8279,6 +8282,7 @@ MonoBehaviour:
     - she is probably upset, but it doesn't deter her from her goal
   playedOnce: 0
   delay: 3
+  waitUntilOpen: {fileID: 0}
 --- !u!1 &2033346650
 GameObject:
   m_ObjectHideFlags: 0
