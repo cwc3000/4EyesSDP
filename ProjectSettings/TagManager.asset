@@ -8,6 +8,7 @@ TagManager:
   - webBrowser
   - home
   - newsletter
+  - other
   layers:
   - Default
   - TransparentFX

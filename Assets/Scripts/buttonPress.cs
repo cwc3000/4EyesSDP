@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class buttonPress : MonoBehaviour
 {
     public GameObject objOpened;
-    private float clickNum;
+    private int clickNum;
     public GameObject notif;
     GameObject homePage;
     GameObject NYWN;
@@ -15,7 +15,7 @@ public class buttonPress : MonoBehaviour
     void Start()
     {
         objOpened.SetActive(false);
-        clickNum = 0f;
+        clickNum = 0;
         
     }
 
@@ -36,7 +36,8 @@ public class buttonPress : MonoBehaviour
     public void open ()
     {
         objOpened.SetActive(true);
-        clickNum = clickNum + 1;
+        clickNum ++;
+        objOpened.transform.SetAsLastSibling();
     }
     public void close ()
     {
@@ -52,6 +53,7 @@ public class buttonPress : MonoBehaviour
         else
         {
             objOpened.SetActive(true);
+            objOpened.transform.SetAsLastSibling();
         } 
         
     }

@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// or syntax ||
+
 public class ignoreStart : MonoBehaviour
 {
     public GameObject ignOpened;
+    public GameObject otherOne;
     GameObject homePage;
     GameObject NYWN;
     // Start is called before the first frame update
@@ -26,13 +29,21 @@ public class ignoreStart : MonoBehaviour
     }
     public void openAndClose()
     {
-        if (ignOpened.activeInHierarchy == true)
+        //if selected window is open and other is not, selected window closes
+        if (ignOpened.activeInHierarchy == true && otherOne.activeInHierarchy == false)
         {
             ignOpened.SetActive(false);
         }
+        //and if selected window appears on top while both selected and other windows are active, then close selected window
+        else if (ignOpened.transform.GetSiblingIndex() > otherOne.transform.GetSiblingIndex() && ignOpened.activeInHierarchy == true && otherOne.activeInHierarchy == true)
+        {
+            ignOpened.SetActive(false);
+        }
+        //otherwise, open the selected window and have it appear on top
         else
         {
             ignOpened.SetActive(true);
+            ignOpened.transform.SetAsLastSibling();
         }
 
     }

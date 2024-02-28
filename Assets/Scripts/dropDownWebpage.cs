@@ -8,12 +8,14 @@ public class dropDownWebpage : MonoBehaviour
     public GameObject newsLetter;
     public GameObject homePage;
     public TMP_Dropdown webpages;
-    
+    public GameObject webBrowser;
 
-    //void Start()
-    //{
-    //    webpages = GameObject.Find("Dropdown").GetComponent<Dropdown>();
-    //}
+    private int clickNum;
+    Dropdown.OptionData newsOption;
+    void Start()
+    {
+        //clickNum = 0;
+    }
 
     public void changeWebpages(int value)
     {
@@ -37,5 +39,18 @@ public class dropDownWebpage : MonoBehaviour
         homePage.SetActive(true);
         newsLetter.SetActive(false);
         webpages.value = 0;
+    }
+
+    public void activateWebpage()
+    {
+        //clickNum++;
+        webBrowser.SetActive(true);
+        webBrowser.transform.SetAsLastSibling();
+        //if (clickNum >= 1)
+        //{
+            newsOption = new Dropdown.OptionData();
+            newsOption.text = "News";
+            newsLetter.SetActive(true);
+        //}
     }
 }
