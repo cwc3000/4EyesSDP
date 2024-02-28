@@ -11,7 +11,9 @@ public class dropDownWebpage : MonoBehaviour
     public GameObject webBrowser;
 
     private int clickNum;
-    Dropdown.OptionData newsOption;
+    List<string> dropOptions = new List<string> { "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com" };
+    //Dropdown.OptionData newsOption;
+
     void Start()
     {
         //clickNum = 0;
@@ -43,14 +45,16 @@ public class dropDownWebpage : MonoBehaviour
 
     public void activateWebpage()
     {
-        //clickNum++;
+        clickNum++;
         webBrowser.SetActive(true);
         webBrowser.transform.SetAsLastSibling();
-        //if (clickNum >= 1)
-        //{
-            newsOption = new Dropdown.OptionData();
-            newsOption.text = "News";
-            newsLetter.SetActive(true);
-        //}
+        if (clickNum == 1)
+        {
+            webpages.AddOptions(dropOptions);
+            //newsOption = new Dropdown.OptionData();
+            //newsOption.text = "News";
+            //newsLetter.SetActive(true);
+        }
+        webpages.value = 1;
     }
 }
