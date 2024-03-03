@@ -6,16 +6,17 @@ using TMPro;
 
 public class emailSlot : MonoBehaviour
 {
+    public emailItem email;
     public Button emailButton;
-    //public GameObject notif;
+    //public Image notif;
     
-    emailItem email;
+    //emailItem email;
 
     public void addEmail (emailItem newEmail)
     {
         email = newEmail;
         emailButton.enabled = true;
-        //notif.SetActive(true);
+        //notif.enabled = true;
     }
 
     public void interactEmail()

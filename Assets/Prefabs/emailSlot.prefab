@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0b94bff49d5fc459d7e737f11fb735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  email: {fileID: 0}
   emailButton: {fileID: 5469539621189950079}
 --- !u!1 &4718296869045503301
 GameObject:

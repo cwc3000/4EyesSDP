@@ -9,20 +9,37 @@ public class emailInventory : MonoBehaviour
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
-    private void Awake()
+    public GameObject suspensionEmail;
+    public GameObject NYBBEmail;
+    public GameObject NYWNEmail;
+    public GameObject PrivInvEmail;
+    public GameObject RentEmail;
+    public GameObject PrivInvEmailTwo;
+
+    //private void Awake()
+    //{
+    //    Instance = this;
+    //}
+
+    private void Start()
     {
-        Instance = this;
+        RentEmail.SetActive(true);
+        PrivInvEmail.SetActive(true);
+        NYWNEmail.SetActive(true);
+        NYBBEmail.SetActive(true);
+        suspensionEmail.SetActive(true);
+        PrivInvEmailTwo.SetActive(false);
     }
 
-    
-    public void addEmail(emailItem email)
-    {
-        if (!email.isDefaultEmail)
-        {
-            Emails.Add(email);
-            if (onItemChangedCallback != null)
-                onItemChangedCallback.Invoke();
-        }
 
-    }
+    //public void addEmail(emailItem email)
+    //{
+    //    if (!email.isDefaultEmail)
+    //    {
+    //        Emails.Add(email);
+    //        if (onItemChangedCallback != null)
+    //            onItemChangedCallback.Invoke();
+    //    }
+
+    //}
 }
