@@ -11238,6 +11238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: suspensionEmailContent
       objectReference: {fileID: 0}
+    - target: {fileID: 1758061925277252097, guid: 9351949fbbafef643b097ab3a9fefcb3, type: 3}
+      propertyPath: m_text
+      value: Temporary Suspension of Police Detective Riley Chavez #0663
+      objectReference: {fileID: 0}
     - target: {fileID: 3623692232622734705, guid: 9351949fbbafef643b097ab3a9fefcb3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
