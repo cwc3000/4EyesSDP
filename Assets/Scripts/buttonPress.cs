@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class buttonPress : MonoBehaviour
 {
     public GameObject objOpened;
+    private GameObject self;
     private int clickNum;
     public GameObject notif;
     GameObject homePage;
@@ -44,6 +45,12 @@ public class buttonPress : MonoBehaviour
         objOpened.SetActive(false);
         //file.SetActive(false);   
     }
+    //public void closeSelfandOther()
+    //{
+    //    self.transform.parent = gameObject.transform;
+    //    self.SetActive(false);
+    //    objOpened.SetActive(false);
+    //}
     public void openAndClose()
     {
         if (objOpened.activeInHierarchy == true)

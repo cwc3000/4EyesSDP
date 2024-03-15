@@ -9,17 +9,17 @@ using Unity.VisualScripting;
 public class messageManager : MonoBehaviour
 {
 
-    public TMP_Text messageText;
+    //public TMP_Text messageText;
     public GameObject otherMessage;
     public float textSpeed = 0.02f;
 
     //public Animator rileyAnimator;
     public GameObject contentArea;
 
-    //bool finishedMessage;
+    bool finishedMessage;
 
     private Queue<string> messages;
-
+    GameObject newMessageBox = null;
 
     void Start()
     {
@@ -30,9 +30,15 @@ public class messageManager : MonoBehaviour
     void Update()
     {
         StartCoroutine(waitSeconds());
-        
+
+        //if (finishedMessage == true)
+        //{
+        //    DisplayNextMessage();
+        //}
+
     }
 
+    // wait a few seconds before displaying the next message
     IEnumerator waitSeconds()
     {
         yield return new WaitForSeconds(3);
@@ -41,10 +47,6 @@ public class messageManager : MonoBehaviour
 
     public void StartMessage(Message Message)
     {
-
-        otherMessage.GetComponent<Animator>().SetBool("isOpen", true);
-        otherMessage.GetComponent<Animator>().SetBool("isStay", true);
-        //GameObject newMessageBox = Instantiate(otherMessage, contentArea.transform);
         messages.Clear();
 
         foreach (string message in Message.messages)
@@ -57,42 +59,49 @@ public class messageManager : MonoBehaviour
 
     public void DisplayNextMessage()
     {
-        
+        // this may be unneeded since nothing happens in the EndMessage function but leaving it in case I need to add choices
         if (messages.Count == 0)
         {
-            EndDialogue();
+            EndMessages();
             return;
         }
 
+        // return next message
         string message = messages.Dequeue();
 
-        messageText.text = "";
+        // create a new text message box to correct area, and then set it to open so it plays the message pop up animation
+        newMessageBox = Instantiate(otherMessage, contentArea.transform);
+        newMessageBox.SetActive(true);
+        //newMessageBox.GetComponent<Animator>().SetBool("isStay", true); 
+        newMessageBox.GetComponent<Animator>().SetBool("isOpen", true);
         
-        //foreach (string message in Message.messages)
-        //{
-        //    GameObject newMessageBox = Instantiate(otherMessage, contentArea.transform);
-        //    newMessageBox.SetActive(true);
-            
-        //}
+        // set the new message box's text component to include the actual message it should print
+        newMessageBox.GetComponentInChildren<TMP_Text>().text = message;
         
         
         StopAllCoroutines();
-        StartCoroutine(TypeMessage(message));
+        //StartCoroutine(TypeMessage(message));
         }
 
+    // not using typing for messages since I want them to instantly pop up like for messaging rather than dialogue
     IEnumerator TypeMessage(string message)
     {
-        messageText.text = "";
+        newMessageBox.GetComponentInChildren<TMP_Text>().text = "";
         foreach (char letter in message.ToCharArray())
         {
-            messageText.text += letter;
+            newMessageBox.GetComponentInChildren<TMP_Text>().text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+        //if (letter == 0)
+        //{
+        //    finishedMessage = true;
+        //}
     }
 
-    void EndDialogue()
+    void EndMessages()
     {
-        otherMessage.GetComponent<Animator>().SetBool("isStay", true);
+        //newMessageBox.GetComponent<Animator>().SetBool("isOpen", true);
+        //newMessageBox.GetComponent<Animator>().SetBool("isStay", true);
     }
 }
 

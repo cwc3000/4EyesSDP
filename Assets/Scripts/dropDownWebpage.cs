@@ -9,27 +9,35 @@ public class dropDownWebpage : MonoBehaviour
     public GameObject homePage;
     public TMP_Dropdown webpages;
     public GameObject webBrowser;
-
+    GameObject homeTab;
+    GameObject NYWNTab;
     private int clickNum;
-    List<string> dropOptions = new List<string> { "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com" };
+    List<string> newsOption = new List<string> { "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com" };
+    
+
     //Dropdown.OptionData newsOption;
 
     void Start()
     {
         //clickNum = 0;
+        homeTab = GameObject.FindGameObjectWithTag("homeWebTab");
+        NYWNTab = GameObject.FindGameObjectWithTag("NYWNWebTab");
+        NYWNTab.SetActive(false);
     }
 
     public void changeWebpages(int value)
     {
         if(value == 0)
         {
-            homePage.SetActive(true); 
+            homePage.SetActive(true);
+            homeTab.SetActive(true);
             newsLetter.SetActive(false);
         }
 
         if(value == 1)
         {
-            newsLetter.SetActive(true); 
+            newsLetter.SetActive(true);
+            NYWNTab.SetActive(true);
             homePage.SetActive(false);
         }
         //case 0: homePage.SetActive(true); newsLetter.SetActive(false); break;
@@ -39,6 +47,7 @@ public class dropDownWebpage : MonoBehaviour
     public void goHomePage()
     {
         homePage.SetActive(true);
+        homeTab.SetActive(true);
         newsLetter.SetActive(false);
         webpages.value = 0;
     }
@@ -50,7 +59,7 @@ public class dropDownWebpage : MonoBehaviour
         webBrowser.transform.SetAsLastSibling();
         if (clickNum == 1)
         {
-            webpages.AddOptions(dropOptions);
+            webpages.AddOptions(newsOption);
             //newsOption = new Dropdown.OptionData();
             //newsOption.text = "News";
             //newsLetter.SetActive(true);

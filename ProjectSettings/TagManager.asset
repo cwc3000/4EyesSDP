@@ -8,9 +8,9 @@ TagManager:
   - webBrowser
   - home
   - newsletter
-  - other
-  - emailLoc
-  - webLoc
+  - homeWebTab
+  - NYWNWebTab
+  - objs
   layers:
   - Default
   - TransparentFX
