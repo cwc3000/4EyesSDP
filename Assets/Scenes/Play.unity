@@ -9567,7 +9567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1467009610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11393,7 +11393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1668337581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14578,6 +14578,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: message.messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: message.messages.Array.data[0]
       value: 'message 1: some more text to fill in time???'
       objectReference: {fileID: 0}
@@ -14591,14 +14595,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: message.messages.Array.data[0].message
-      value: message from other
+      value: message from other person
       objectReference: {fileID: 0}
     - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: message.messages.Array.data[1].isRiley
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: message.messages.Array.data[1].message
+      value: message from other person again
+      objectReference: {fileID: 0}
+    - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: message.messages.Array.data[2].isRiley
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: message.messages.Array.data[2].message
       value: message from riley
       objectReference: {fileID: 0}
     - target: {fileID: 2443005557290711677, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
