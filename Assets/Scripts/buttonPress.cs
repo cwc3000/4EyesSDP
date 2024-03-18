@@ -9,6 +9,7 @@ public class buttonPress : MonoBehaviour
     private GameObject self;
     private int clickNum;
     public GameObject notif;
+    public bool showNotif = false;
     GameObject homePage;
     GameObject NYWN;
     //public GameObject file;
@@ -23,13 +24,16 @@ public class buttonPress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (clickNum == 0)
+        if (showNotif)
         {
-            notif.SetActive(true);
-        }
-        else if (clickNum >= 1)
-        {
-            notif.SetActive(false);
+            if (clickNum == 0)
+            {
+                notif.SetActive(true);
+            }
+            else if (clickNum >= 1)
+            {
+                notif.SetActive(false);
+            }
         }
         homePage = GameObject.FindGameObjectWithTag("home");
         NYWN = GameObject.FindGameObjectWithTag("newsletter");

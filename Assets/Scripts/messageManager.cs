@@ -65,7 +65,7 @@ public class messageManager : MonoBehaviour
 
     void Update()
     {
-        StartCoroutine(waitSeconds());
+        //StartCoroutine(waitSeconds());
 
         //if (finishedMessage == true)
         //{
@@ -77,8 +77,8 @@ public class messageManager : MonoBehaviour
     // wait a few seconds before displaying the next message
     IEnumerator waitSeconds()
     {
-        yield return new WaitForSeconds(3);
         DisplayNextMessage();
+        yield return new WaitForSeconds(3);  
     }
 
     public void StartMessage(MessageHolder Message)
@@ -91,8 +91,8 @@ public class messageManager : MonoBehaviour
             //isRiley = message.isRiley;
         }
 
-        
-        DisplayNextMessage();
+        //StartCoroutine(waitSeconds());
+        InvokeRepeating("DisplayNextMessage",0, 3.0f);
     }
 
     public void DisplayNextMessage()
@@ -138,7 +138,9 @@ public class messageManager : MonoBehaviour
 
     void EndMessages()
     {
+        CancelInvoke("DisplayNextMessage");
         finishedMessage = true;
+        
         Debug.Log("finished message" + finishedMessage);
         //isRiley = false;
         //isOther = false;

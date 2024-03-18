@@ -1736,6 +1736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 289435573}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!114 &235654506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,6 +2101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 1249342349}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!1 &289435573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 77074630237192176, guid: aa4361175899fdf47b1344f9b96c2d8d, type: 3}
@@ -2298,6 +2300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 1752432490}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!114 &350827158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3413,6 +3416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 0}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5626,6 +5630,10 @@ PrefabInstance:
       propertyPath: objOpened
       value: 
       objectReference: {fileID: 1511050933}
+    - target: {fileID: 6774423822951362477, guid: 21e70a4e3b94e4946b0d497a9521d6d8, type: 3}
+      propertyPath: showNotif
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7083640736164314092, guid: 21e70a4e3b94e4946b0d497a9521d6d8, type: 3}
       propertyPath: waitUntilOpen
       value: 
@@ -7000,6 +7008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 1249342349}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!1001 &1162693088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8365,7 +8374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7888477413484094100, guid: aa4361175899fdf47b1344f9b96c2d8d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 458.47498
+      value: 458.475
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9593,6 +9602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 0}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!114 &1467009612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10523,6 +10533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 132128579}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!1 &1575903137
 GameObject:
   m_ObjectHideFlags: 0
@@ -11714,7 +11725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7888477413484094100, guid: aa4361175899fdf47b1344f9b96c2d8d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 458.47504
+      value: 458.475
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13058,6 +13069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 0}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!1 &1918084614
 GameObject:
   m_ObjectHideFlags: 0
@@ -13826,6 +13838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 132128579}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!1 &2054492383
 GameObject:
   m_ObjectHideFlags: 0
