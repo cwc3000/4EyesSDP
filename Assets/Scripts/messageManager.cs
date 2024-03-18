@@ -11,19 +11,54 @@ public class messageManager : MonoBehaviour
 
     //public TMP_Text messageText;
     public GameObject otherMessage;
+    public GameObject rileyMessage;
+
+    
+
     public float textSpeed = 0.02f;
 
-    //public Animator rileyAnimator;
     public GameObject contentArea;
 
-    bool finishedMessage;
-
+    public bool finishedMessage;
+    public bool isRiley;
+    public bool isOther;
     private Queue<string> messages;
     GameObject newMessageBox = null;
 
+    [SerializeField] Button[] senderTriggers;
+
+
+
+    void Awake()
+    {
+        finishedMessage = false;
+    }
     void Start()
     {
         messages = new Queue<string>();
+        foreach (Button sender in senderTriggers)
+        {
+            Button sndr = sender;
+            sender.onClick.AddListener(() => TaskOnClick(sender));
+
+        }
+
+    }
+
+    void TaskOnClick(Button sndr)
+    {
+        if (sndr.tag == "rileyMSG")
+        {
+            isRiley = true;
+            isOther = false;
+            //Debug.Log(isRiley);
+        }
+        if (sndr.tag == "otherMSG")
+        {
+            isRiley = false;
+            isOther = true;
+            //Debug.Log(isOther);
+        }
     }
 
 
@@ -54,6 +89,7 @@ public class messageManager : MonoBehaviour
             messages.Enqueue(message);
         }
 
+        
         DisplayNextMessage();
     }
 
@@ -69,37 +105,40 @@ public class messageManager : MonoBehaviour
         // return next message
         string message = messages.Dequeue();
 
-        // create a new text message box to correct area, and then set it to open so it plays the message pop up animation
-        newMessageBox = Instantiate(otherMessage, contentArea.transform);
-        newMessageBox.SetActive(true);
-        //newMessageBox.GetComponent<Animator>().SetBool("isStay", true); 
-        newMessageBox.GetComponent<Animator>().SetBool("isOpen", true);
+        if (isRiley && !isOther)
+        {
+            Debug.Log(isRiley);
+            newMessageBox = Instantiate(rileyMessage, contentArea.transform);
+            newMessageBox.SetActive(true);
+            newMessageBox.GetComponentInChildren<Animator>().SetBool("isOpen", true);
+
+            // set the new message box's text component to include the actual message it should print
+            newMessageBox.GetComponentInChildren<TMP_Text>().text = message;
+        }
+        else 
+        {
+            Debug.Log("not Riley");
+            // create a new text message box to correct area, and then set it to open so it plays the message pop up animation
+            newMessageBox = Instantiate(otherMessage, contentArea.transform);
+            newMessageBox.SetActive(true);
+            //newMessageBox.GetComponent<Animator>().SetBool("isStay", true); 
+            newMessageBox.GetComponentInChildren<Animator>().SetBool("isOpen", true);
+
+            // set the new message box's text component to include the actual message it should print
+            newMessageBox.GetComponentInChildren<TMP_Text>().text = message;
+        }
         
-        // set the new message box's text component to include the actual message it should print
-        newMessageBox.GetComponentInChildren<TMP_Text>().text = message;
         
         
         StopAllCoroutines();
-        //StartCoroutine(TypeMessage(message));
         }
-
-    // not using typing for messages since I want them to instantly pop up like for messaging rather than dialogue
-    IEnumerator TypeMessage(string message)
-    {
-        newMessageBox.GetComponentInChildren<TMP_Text>().text = "";
-        foreach (char letter in message.ToCharArray())
-        {
-            newMessageBox.GetComponentInChildren<TMP_Text>().text += letter;
-            yield return new WaitForSeconds(textSpeed);
-        }
-        //if (letter == 0)
-        //{
-        //    finishedMessage = true;
-        //}
-    }
 
     void EndMessages()
     {
+        finishedMessage = true;
+        Debug.Log("finished message" + finishedMessage);
+        //isRiley = false;
+        //isOther = false;
         //newMessageBox.GetComponent<Animator>().SetBool("isOpen", true);
         //newMessageBox.GetComponent<Animator>().SetBool("isStay", true);
     }

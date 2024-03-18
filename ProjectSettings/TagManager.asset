@@ -11,6 +11,8 @@ TagManager:
   - homeWebTab
   - NYWNWebTab
   - objs
+  - rileyMSG
+  - otherMSG
   layers:
   - Default
   - TransparentFX
