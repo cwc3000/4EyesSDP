@@ -20,12 +20,12 @@ public class messageManager : MonoBehaviour
     public GameObject contentArea;
 
     public bool finishedMessage;
-    public bool isRiley;
-    public bool isOther;
-    private Queue<string> messages;
+    private bool isRiley;
+    //public bool isOther;
+    private List<Message> messages = new List<Message>();
     GameObject newMessageBox = null;
 
-    [SerializeField] Button[] senderTriggers;
+    //[SerializeField] Button[] senderTriggers;
 
 
 
@@ -35,31 +35,32 @@ public class messageManager : MonoBehaviour
     }
     void Start()
     {
-        messages = new Queue<string>();
-        foreach (Button sender in senderTriggers)
-        {
-            Button sndr = sender;
-            sender.onClick.AddListener(() => TaskOnClick(sender));
+        //messages = new List<Message>();
+        
+        //foreach (Button sender in senderTriggers)
+        //{
+        //    Button sndr = sender;
+        //    sender.onClick.AddListener(() => TaskOnClick(sender));
 
-        }
+        //}
 
     }
 
-    void TaskOnClick(Button sndr)
-    {
-        if (sndr.tag == "rileyMSG")
-        {
-            isRiley = true;
-            isOther = false;
-            //Debug.Log(isRiley);
-        }
-        if (sndr.tag == "otherMSG")
-        {
-            isRiley = false;
-            isOther = true;
-            //Debug.Log(isOther);
-        }
-    }
+    //void TaskOnClick(Button sndr)
+    //{
+    //    if (sndr.tag == "rileyMSG")
+    //    {
+    //        isRiley = true;
+    //        isOther = false;
+    //        //Debug.Log(isRiley);
+    //    }
+    //    if (sndr.tag == "otherMSG")
+    //    {
+    //        isRiley = false;
+    //        isOther = true;
+    //        //Debug.Log(isOther);
+    //    }
+    //}
 
 
     void Update()
@@ -80,13 +81,14 @@ public class messageManager : MonoBehaviour
         DisplayNextMessage();
     }
 
-    public void StartMessage(Message Message)
+    public void StartMessage(MessageHolder Message)
     {
         messages.Clear();
 
-        foreach (string message in Message.messages)
+        foreach (Message message in Message.messages)
         {
-            messages.Enqueue(message);
+            messages.Add(message);
+            //isRiley = message.isRiley;
         }
 
         
@@ -103,9 +105,10 @@ public class messageManager : MonoBehaviour
         }
 
         // return next message
-        string message = messages.Dequeue();
+        Message message = messages[0];
+        messages.RemoveAt(0);
 
-        if (isRiley && !isOther)
+        if (message.isRiley)
         {
             Debug.Log(isRiley);
             newMessageBox = Instantiate(rileyMessage, contentArea.transform);
@@ -113,7 +116,7 @@ public class messageManager : MonoBehaviour
             newMessageBox.GetComponentInChildren<Animator>().SetBool("isOpen", true);
 
             // set the new message box's text component to include the actual message it should print
-            newMessageBox.GetComponentInChildren<TMP_Text>().text = message;
+            newMessageBox.GetComponentInChildren<TMP_Text>().text = message.message;
         }
         else 
         {
@@ -125,7 +128,7 @@ public class messageManager : MonoBehaviour
             newMessageBox.GetComponentInChildren<Animator>().SetBool("isOpen", true);
 
             // set the new message box's text component to include the actual message it should print
-            newMessageBox.GetComponentInChildren<TMP_Text>().text = message;
+            newMessageBox.GetComponentInChildren<TMP_Text>().text = message.message;
         }
         
         

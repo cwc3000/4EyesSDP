@@ -1269,11 +1269,6 @@ MonoBehaviour:
   textSpeed: 0.02
   contentArea: {fileID: 9103544941447669212}
   finishedMessage: 0
-  isRiley: 0
-  isOther: 0
-  senderTriggers:
-  - {fileID: 1467009612}
-  - {fileID: 1699183142}
 --- !u!1 &161473597
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,7 +3288,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message:
     messages:
-    - I picked choice 1
+    - message: 
+      isRiley: 0
   choicesObj: {fileID: 0}
   isRiley: 0
   mM: {fileID: 0}
@@ -3415,7 +3411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9941cb7e4699449489a5ce6de8b44390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objOpened: {fileID: 1746275280}
+  objOpened: {fileID: 0}
   notif: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
@@ -8500,7 +8496,6 @@ RectTransform:
   - {fileID: 737721390}
   - {fileID: 1384896824}
   - {fileID: 776913521}
-  - {fileID: 1746275281}
   - {fileID: 1668337581}
   - {fileID: 1101465023}
   - {fileID: 1189175889}
@@ -9596,7 +9591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9941cb7e4699449489a5ce6de8b44390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objOpened: {fileID: 1746275280}
+  objOpened: {fileID: 0}
   notif: {fileID: 0}
 --- !u!114 &1467009612
 MonoBehaviour:
@@ -9611,7 +9606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -9642,18 +9637,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1467009611}
-        m_TargetAssemblyTypeName: buttonPress, Assembly-CSharp
-        m_MethodName: open
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1467009615}
         m_TargetAssemblyTypeName: messageTrigger, Assembly-CSharp
         m_MethodName: triggerMessage
@@ -9718,7 +9701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message:
     messages:
-    - I chose choice 1
+    - message: 
+      isRiley: 0
   choicesObj: {fileID: 0}
   isRiley: 0
   mM: {fileID: 0}
@@ -11843,17 +11827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05409cc106cbd38478fff552b7d63dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1699183142 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2443005557290711677, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
-  m_PrefabInstance: {fileID: 1146722919126526435}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1733065988
 GameObject:
   m_ObjectHideFlags: 0
@@ -12062,81 +12035,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736465482}
-  m_CullTransparentMesh: 1
---- !u!1 &1746275280
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1746275281}
-  - component: {fileID: 1746275283}
-  - component: {fileID: 1746275282}
-  m_Layer: 5
-  m_Name: exampleIMG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1746275281
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746275280}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1318067026}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1257.9883, y: -382}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1746275282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746275280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1746275283
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746275280}
   m_CullTransparentMesh: 1
 --- !u!1 &1752432490
 GameObject:
@@ -13214,7 +13112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message:
     messages:
-    - I picked choice 2
+    - message: 
+      isRiley: 0
   choicesObj: {fileID: 0}
   isRiley: 0
   mM: {fileID: 0}
@@ -14662,12 +14561,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: message.isRiley.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: message.messages.Array.data[0]
       value: 'message 1: some more text to fill in time???'
       objectReference: {fileID: 0}
     - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: message.messages.Array.data[1]
       value: 'message 2: to fill in morew texr and spaxe'
+      objectReference: {fileID: 0}
+    - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: message.messages.Array.data[0].isRiley
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: message.messages.Array.data[0].message
+      value: message from other
+      objectReference: {fileID: 0}
+    - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: message.messages.Array.data[1].isRiley
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: message.messages.Array.data[1].message
+      value: message from riley
       objectReference: {fileID: 0}
     - target: {fileID: 2443005557290711677, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

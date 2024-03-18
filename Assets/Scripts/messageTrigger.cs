@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class messageTrigger : MonoBehaviour
 {
-    public Message message;
+    public MessageHolder message;
     public GameObject choicesObj;
     //public Button sender;
     public bool isRiley;
