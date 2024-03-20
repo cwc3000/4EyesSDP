@@ -7,15 +7,19 @@ using UnityEngine;
 public class ignoreStart : MonoBehaviour
 {
     public GameObject ignOpened;
-    public GameObject otherOne;
+    //public GameObject otherOne;
     GameObject homePage;
     GameObject NYWN;
+    GameObject objs;
+    //GameObject selfTab;
     // Start is called before the first frame update
     void Start()
     {
         ignOpened.SetActive(true);
         homePage = GameObject.FindGameObjectWithTag("home");
         NYWN = GameObject.FindGameObjectWithTag("newsletter");
+        objs = GameObject.FindGameObjectWithTag("objs");
+        //selfTab = GameObject.transform.parent;
     }
 
     // Update is called once per frame
@@ -27,38 +31,31 @@ public class ignoreStart : MonoBehaviour
     {
         ignOpened.SetActive(false);
     }
+    public void closeSelfandPage()
+    {
+        this.transform.parent.gameObject.SetActive(false);
+        ignOpened.SetActive(false);
+    }
+    
+    //toggling system for bottom bar icons
     public void openAndClose()
     {
-        //if selected window is open and other is not, selected window closes
-        if (ignOpened.activeInHierarchy == true && otherOne.activeInHierarchy == false)
-        {
-            ignOpened.SetActive(false);
-            //if (gameObject.tag == "webLoc")
-            //{
-            //    ignOpened.transform.position = new Vector3(0, 519.6f, 0);
-            //}
-                
-
-        }
-        //and if selected window appears on top while both selected and other windows are active, then close selected window
-        else if (ignOpened.transform.GetSiblingIndex() > otherOne.transform.GetSiblingIndex() && ignOpened.activeInHierarchy == true && otherOne.activeInHierarchy == true)
-        {
-            ignOpened.SetActive(false);
-        }
-        //otherwise, open the selected window and have it appear on top
-        else
+        //if selected window is closed, open it and bring to front
+        if (ignOpened.activeInHierarchy == false)
         {
             ignOpened.SetActive(true);
-            //if (gameObject.tag == "emailLoc")
-            //{
-            //    ignOpened.transform.position = new Vector3(0, 32.513f,0);
-            //}
-            //else if (gameObject.tag == "webLoc")
-            //{
-            //    ignOpened.transform.position = new Vector3(0, 519.6f, 0);
-            //}
-            
-            
+            ignOpened.transform.SetAsLastSibling();
+
+        }
+        //if selected window is the last sibling, close it and bring it to the back
+        else if (ignOpened.transform.GetSiblingIndex() == objs.transform.childCount - 1)
+        {
+            ignOpened.SetActive(false);
+            ignOpened.transform.SetAsFirstSibling();
+        }
+        //otherwise, when toggling, bring it to the front
+        else
+        {
             ignOpened.transform.SetAsLastSibling();
         }
 
@@ -66,6 +63,8 @@ public class ignoreStart : MonoBehaviour
     public void browserHome()
     {
         homePage.SetActive(true);
+        //GameObject homeTab = GameObject.FindGameObjectWithTag("homeWebTab");
+        //homeTab.SetActive(true);
         NYWN.SetActive(false);
     }
     public void goNewsletter()
