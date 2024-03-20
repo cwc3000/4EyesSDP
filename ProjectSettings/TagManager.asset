@@ -13,6 +13,7 @@ TagManager:
   - objs
   - rileyMSG
   - otherMSG
+  - empty
   layers:
   - Default
   - TransparentFX

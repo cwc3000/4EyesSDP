@@ -18,7 +18,10 @@ public class buttonPress : MonoBehaviour
     {
         objOpened.SetActive(false);
         clickNum = 0;
-        
+        if (notif = null)
+        {
+            notif = GameObject.FindWithTag("empty");
+        }
     }
 
     // Update is called once per frame
@@ -26,35 +29,34 @@ public class buttonPress : MonoBehaviour
     {
         if (showNotif)
         {
-            if (clickNum == 0)
-            {
-                notif.SetActive(true);
-            }
-            else if (clickNum >= 1)
-            {
-                notif.SetActive(false);
-            }
+            notif.SetActive(true);
+        }
+        else if (!showNotif)
+        {
+            notif.SetActive(false);
         }
         homePage = GameObject.FindGameObjectWithTag("home");
         NYWN = GameObject.FindGameObjectWithTag("newsletter");
     }
+
+    public void showNotification()
+    {
+        showNotif = true;
+    }
+    public void closeNotification()
+    {
+        showNotif = false;
+    }
     public void open ()
     {
         objOpened.SetActive(true);
-        clickNum ++;
+        //showNotif = false;
         objOpened.transform.SetAsLastSibling();
     }
     public void close ()
     {
-        objOpened.SetActive(false);
-        //file.SetActive(false);   
+        objOpened.SetActive(false); 
     }
-    //public void closeSelfandOther()
-    //{
-    //    self.transform.parent = gameObject.transform;
-    //    self.SetActive(false);
-    //    objOpened.SetActive(false);
-    //}
     public void openAndClose()
     {
         if (objOpened.activeInHierarchy == true)

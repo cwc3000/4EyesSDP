@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7564970709909666338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 0}
   notif: {fileID: 7606989302473534477}
+  showNotif: 0
 --- !u!114 &7083640736164314092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +193,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3858969159883054431}
-  - component: {fileID: 6493854893305736093}
   m_Layer: 5
   m_Name: emailSlot
   m_TagString: Untagged
@@ -220,20 +220,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 405}
   m_SizeDelta: {x: 320, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6493854893305736093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4658104776046054573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d0b94bff49d5fc459d7e737f11fb735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  email: {fileID: 0}
-  emailButton: {fileID: 5469539621189950079}
 --- !u!1 &4718296869045503301
 GameObject:
   m_ObjectHideFlags: 0

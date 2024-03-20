@@ -16,7 +16,7 @@ public class dragObj : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragH
 
     void Start()
     {
-        rectTransform.GetComponent<RectTransform>();
+        //rectTransform.GetComponent<RectTransform>();
         image = GetComponent<Image>();
 
 
