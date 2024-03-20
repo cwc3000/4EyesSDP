@@ -18,9 +18,9 @@ public class buttonPress : MonoBehaviour
     {
         objOpened.SetActive(false);
         clickNum = 0;
-        if (notif = null)
+        if (notif == null)
         {
-            notif = GameObject.FindWithTag("empty");
+            notif = GameObject.FindGameObjectWithTag("empty");
         }
     }
 
@@ -46,6 +46,7 @@ public class buttonPress : MonoBehaviour
     public void closeNotification()
     {
         showNotif = false;
+        notif.SetActive(false);
     }
     public void open ()
     {

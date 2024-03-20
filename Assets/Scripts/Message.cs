@@ -11,7 +11,7 @@ public class MessageHolder
 [System.Serializable]
 public class Message
 {
+    public bool isRiley;
     [TextArea(3, 10)]
     public string message;
-    public bool isRiley;
 }

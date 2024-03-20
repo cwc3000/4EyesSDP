@@ -110,7 +110,7 @@ public class messageManager : MonoBehaviour
 
         if (message.isRiley)
         {
-            Debug.Log(isRiley);
+            //Debug.Log(isRiley);
             newMessageBox = Instantiate(rileyMessage, contentArea.transform);
             newMessageBox.SetActive(true);
             newMessageBox.GetComponentInChildren<Animator>().SetBool("isOpen", true);
@@ -120,7 +120,7 @@ public class messageManager : MonoBehaviour
         }
         else 
         {
-            Debug.Log("not Riley");
+            //Debug.Log("not Riley");
             // create a new text message box to correct area, and then set it to open so it plays the message pop up animation
             newMessageBox = Instantiate(otherMessage, contentArea.transform);
             newMessageBox.SetActive(true);
