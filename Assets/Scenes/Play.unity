@@ -4306,7 +4306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &849573199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4886,8 +4886,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 535b81281f1d79f4c95a027b01589a8f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7671,7 +7671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 964cdcbc02b07a847bfec560896a018b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12cf35d540d5ed9409af7f1f2f288946, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11725,7 +11725,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7888477413484094100, guid: aa4361175899fdf47b1344f9b96c2d8d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 458.475
+      value: 846.48126
+      objectReference: {fileID: 0}
+    - target: {fileID: 9092764211160978441, guid: aa4361175899fdf47b1344f9b96c2d8d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
