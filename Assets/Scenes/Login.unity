@@ -271,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 0}
   notif: {fileID: 0}
+  showNotif: 0
 --- !u!1 &928559713
 GameObject:
   m_ObjectHideFlags: 0
