@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 // or syntax ||
@@ -11,6 +12,7 @@ public class ignoreStart : MonoBehaviour
     GameObject homePage;
     GameObject NYWN;
     GameObject objs;
+    private TMP_Dropdown webpages;
     //GameObject selfTab;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class ignoreStart : MonoBehaviour
         homePage = GameObject.FindGameObjectWithTag("home");
         NYWN = GameObject.FindGameObjectWithTag("newsletter");
         objs = GameObject.FindGameObjectWithTag("objs");
+        webpages = GameObject.FindGameObjectWithTag("webPageOptions").GetComponent<TMP_Dropdown>();
         //selfTab = GameObject.transform.parent;
     }
 
@@ -27,6 +30,31 @@ public class ignoreStart : MonoBehaviour
     {
         
     }
+    
+    public void open()
+    {
+        ignOpened.SetActive(true);
+        ignOpened.transform.SetAsLastSibling();
+    }
+    public void openFromTabHome()
+    {
+        ignOpened.SetActive(true);
+        ignOpened.transform.SetAsLastSibling();
+        webpages.value = 0;
+    }
+    public void openFromTabNews()
+    {
+        ignOpened.SetActive(true);
+        ignOpened.transform.SetAsLastSibling();
+        webpages.value = 1;
+    }
+    public void openFromTabSocMed()
+    {
+        ignOpened.SetActive(true);
+        ignOpened.transform.SetAsLastSibling();
+        webpages.value = 2;
+    }
+
     public void close()
     {
         ignOpened.SetActive(false);

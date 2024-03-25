@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 112859702669230581}
   - component: {fileID: 7599470943708922409}
   - component: {fileID: 5084825577233583394}
+  - component: {fileID: 5918552502739254115}
   m_Layer: 5
   m_Name: webTab
   m_TagString: homeWebTab
@@ -122,6 +123,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5918552502739254115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387754049784298502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c188d13aa01f7e4cb6eb3b9d859b1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newsLetter: {fileID: 0}
+  homePage: {fileID: 0}
+  socMed: {fileID: 0}
+  webpages: {fileID: 0}
+  webBrowser: {fileID: 0}
 --- !u!1 &3441241001754097145
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +421,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignOpened: {fileID: 0}
-  otherOne: {fileID: 0}
 --- !u!1 &6848366522840511955
 GameObject:
   m_ObjectHideFlags: 0

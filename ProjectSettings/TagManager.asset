@@ -13,6 +13,8 @@ TagManager:
   - objs
   - rileyMSG
   - otherMSG
+  - socMedTab
+  - webPageOptions
   layers:
   - Default
   - TransparentFX

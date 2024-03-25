@@ -7,13 +7,17 @@ public class dropDownWebpage : MonoBehaviour
 {
     public GameObject newsLetter;
     public GameObject homePage;
+    public GameObject socMed;
     public TMP_Dropdown webpages;
     public GameObject webBrowser;
     GameObject homeTab;
     GameObject NYWNTab;
+    GameObject socMedTab;
     private int clickNum;
-    List<string> newsOption = new List<string> { "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com" };
+    private int pageNum;
     
+    List<string> newsOption = new List<string> { "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com" };
+    List<string> socMedOption = new List<string> { "<b>YourFace</b>     www.yourFace.com" };
 
     //Dropdown.OptionData newsOption;
 
@@ -22,7 +26,10 @@ public class dropDownWebpage : MonoBehaviour
         //clickNum = 0;
         homeTab = GameObject.FindGameObjectWithTag("homeWebTab");
         NYWNTab = GameObject.FindGameObjectWithTag("NYWNWebTab");
+        socMedTab = GameObject.FindGameObjectWithTag("socMedTab");
         NYWNTab.SetActive(false);
+        socMedTab.SetActive(false);
+        //pageNum = webpages.value;
     }
 
     public void changeWebpages(int value)
@@ -32,12 +39,22 @@ public class dropDownWebpage : MonoBehaviour
             homePage.SetActive(true);
             homeTab.SetActive(true);
             newsLetter.SetActive(false);
+            socMed.SetActive(false);
         }
 
         if(value == 1)
         {
+            Debug.Log(value);
             newsLetter.SetActive(true);
             NYWNTab.SetActive(true);
+            homePage.SetActive(false);
+            socMed.SetActive(false);
+        }
+        if (value == 2)
+        {
+            socMed.SetActive(true);
+            socMedTab.SetActive(true);
+            newsLetter.SetActive(false);
             homePage.SetActive(false);
         }
         //case 0: homePage.SetActive(true); newsLetter.SetActive(false); break;
@@ -52,9 +69,9 @@ public class dropDownWebpage : MonoBehaviour
         webpages.value = 0;
     }
 
-    public void activateWebpage()
+    public void activateNewsPage()
     {
-        clickNum++;
+        clickNum = 1;
         webBrowser.SetActive(true);
         webBrowser.transform.SetAsLastSibling();
         if (clickNum == 1)
@@ -65,5 +82,16 @@ public class dropDownWebpage : MonoBehaviour
             //newsLetter.SetActive(true);
         }
         webpages.value = 1;
+    }
+    public void activateSocMed()
+    {
+        clickNum = 2;
+        webBrowser.SetActive(true);
+        webBrowser.transform.SetAsLastSibling();
+        if (clickNum == 2)
+        {
+            webpages.AddOptions(socMedOption);
+        }
+        webpages.value = 2;
     }
 }
