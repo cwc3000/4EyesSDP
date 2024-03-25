@@ -10,9 +10,9 @@ public class dropDownWebpage : MonoBehaviour
     public GameObject socMed;
     public TMP_Dropdown webpages;
     public GameObject webBrowser;
-    GameObject homeTab;
-    GameObject NYWNTab;
-    GameObject socMedTab;
+    public GameObject homeTab;
+    public GameObject NYWNTab;
+    public GameObject socMedTab;
     private int clickNum;
     private int pageNum;
     
@@ -24,9 +24,9 @@ public class dropDownWebpage : MonoBehaviour
     void Start()
     {
         //clickNum = 0;
-        homeTab = GameObject.FindGameObjectWithTag("homeWebTab");
-        NYWNTab = GameObject.FindGameObjectWithTag("NYWNWebTab");
-        socMedTab = GameObject.FindGameObjectWithTag("socMedTab");
+        //homeTab = GameObject.FindGameObjectWithTag("homeWebTab");
+        //NYWNTab = GameObject.FindGameObjectWithTag("NYWNWebTab");
+        //socMedTab = GameObject.FindGameObjectWithTag("socMedTab");
         NYWNTab.SetActive(false);
         socMedTab.SetActive(false);
         //pageNum = webpages.value;
@@ -37,6 +37,7 @@ public class dropDownWebpage : MonoBehaviour
         if(value == 0)
         {
             homePage.SetActive(true);
+            homePage.transform.SetAsLastSibling();
             homeTab.SetActive(true);
             newsLetter.SetActive(false);
             socMed.SetActive(false);
@@ -44,8 +45,9 @@ public class dropDownWebpage : MonoBehaviour
 
         if(value == 1)
         {
-            Debug.Log(value);
+            //Debug.Log(value);
             newsLetter.SetActive(true);
+            newsLetter.transform.SetAsLastSibling();
             NYWNTab.SetActive(true);
             homePage.SetActive(false);
             socMed.SetActive(false);
@@ -53,6 +55,7 @@ public class dropDownWebpage : MonoBehaviour
         if (value == 2)
         {
             socMed.SetActive(true);
+            socMed.transform.SetAsLastSibling();
             socMedTab.SetActive(true);
             newsLetter.SetActive(false);
             homePage.SetActive(false);
