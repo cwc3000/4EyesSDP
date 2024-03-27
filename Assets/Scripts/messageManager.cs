@@ -20,7 +20,7 @@ public class messageManager : MonoBehaviour
     public GameObject contentArea;
 
     public bool finishedMessage;
-    private bool isRiley;
+    //private bool isRiley;
     //public bool isOther;
     private List<Message> messages = new List<Message>();
     GameObject newMessageBox = null;

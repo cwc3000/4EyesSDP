@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class dialogueTrigger : MonoBehaviour
 {
-    public dialogue dialogue;
+    public dialogueHolder dialogue;
     public bool playedOnce = false;
     public float delay = 5.0f;
     float timer = 0;

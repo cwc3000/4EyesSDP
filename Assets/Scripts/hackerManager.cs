@@ -10,6 +10,8 @@ public class hackerManager : MonoBehaviour
     public Sprite[] spamImages;
 
     GameObject newSpamBox = null;
+    private int i = 0;
+    private float spawnRate = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,17 +27,30 @@ public class hackerManager : MonoBehaviour
 
     public void startSpamMSG()
     {
-        InvokeRepeating("spawnSpamMsgs", 0, 0.5f);
+        
+        InvokeRepeating("spawnSpamMsgs", 0, spawnRate);
     }
     
     public void spawnSpamMsgs()
     {
-        for (var i = 0; i < 6; i++){
-            newSpamBox = Instantiate(spamBox, new Vector3(-i*50 + 960, -i*60 + 540, 0), Quaternion.identity, contentArea.transform);
-            StopAllCoroutines();
-            newSpamBox.transform.Find("spam_Image").GetComponent<Image>().sprite = spamImages[Random.Range(0, 3)];
+        //for (var i = 0; i < 6; i++){
+        
+        if (i == 6)
+        {
+            endSpamMsgs();
         }
         
+            newSpamBox = Instantiate(spamBox, new Vector3(-i*50 + 960, -i*60 + 540, 0), Quaternion.identity, contentArea.transform);
+            newSpamBox.transform.Find("spam_Image").GetComponent<Image>().sprite = spamImages[Random.Range(0, 3)];
+        i++;
+        //}
+        //StopAllCoroutines();
+
+    }
+
+    public void endSpamMsgs()
+    {
+        CancelInvoke("spawnSpamMsgs");
     }
     public void lag()
     {

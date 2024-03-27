@@ -10,18 +10,19 @@ public class dialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
+    public Sprite charaExpression;
     public Animator animator;
     public float textSpeed = 0.02f;
     public GameObject waitUntilOpen;
 
     public GameObject canvas;
 
-    private Queue<string> sentences;
+    private Queue<dialogue> sentences = new Queue<dialogue>();
 
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
+
     }
     
     
@@ -40,7 +41,7 @@ public class dialogueManager : MonoBehaviour
         yield return new WaitForSeconds(3);
     }
 
-    public void StartDialogue(dialogue dialogue)
+    public void StartDialogue(dialogueHolder dialogue)
     {
         //Debug.Log("Starting convo with " + dialogue.name);
 
@@ -51,17 +52,13 @@ public class dialogueManager : MonoBehaviour
         animator.SetBool("isOpen", true);
 
         nameText.text = dialogue.name;
+        //charaExpression = dialogue.characterExpression.sprite;
 
         sentences.Clear();
 
-        //if (waitUntilOpen.activeInHierarchy == true)
-        //{
-        //    StartCoroutine(waitFor());
-        //}
-
-        foreach (string sentence in dialogue.sentences)
+        foreach (dialogue dialog in dialogue.dialogues)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(dialog);
         }
 
         DisplayNextSentence();
@@ -75,12 +72,12 @@ public class dialogueManager : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        dialogue sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
     
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentence (dialogue sentence)
     {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())

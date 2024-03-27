@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 // or syntax ||
@@ -63,6 +64,11 @@ public class ignoreStart : MonoBehaviour
     {
         this.transform.parent.gameObject.SetActive(false);
         ignOpened.SetActive(false);
+    }
+
+    public void closeDestroy()
+    {
+        Destroy(ignOpened);
     }
     
     //toggling system for bottom bar icons
