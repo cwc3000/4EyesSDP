@@ -23,11 +23,17 @@ public class hackerManager : MonoBehaviour
         
     }
 
+    public void startSpamMSG()
+    {
+        InvokeRepeating("spawnSpamMsgs", 0, 0.5f);
+    }
+    
     public void spawnSpamMsgs()
     {
         for (var i = 0; i < 6; i++){
-            newSpamBox = Instantiate(spamBox, new Vector3(i*2,i*2 + 10,0), Quaternion.identity, contentArea.transform);
-            newSpamBox.GetComponent<Image>().sprite = spamImages[Random.Range(0, 3)];
+            newSpamBox = Instantiate(spamBox, new Vector3(-i*50 + 960, -i*60 + 540, 0), Quaternion.identity, contentArea.transform);
+            StopAllCoroutines();
+            newSpamBox.transform.Find("spam_Image").GetComponent<Image>().sprite = spamImages[Random.Range(0, 3)];
         }
         
     }
