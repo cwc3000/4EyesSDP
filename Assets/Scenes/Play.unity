@@ -5533,7 +5533,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 71136a6eca2c1a942897c15397d9c819, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6208,6 +6208,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Detective Friend
       objectReference: {fileID: 0}
+    - target: {fileID: 2270205683208820382, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f1ddd559fc172a4a911371bda515ce3, type: 3}
     - target: {fileID: 2443005557290711677, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -7789,7 +7793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1c2e29183b7fb164a8dd1ba1c4be60c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8241,7 +8245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1bd9e6f0318789d48b99df1173addc47, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14183,6 +14187,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Auntie
       objectReference: {fileID: 0}
+    - target: {fileID: 2270205683208820382, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f1ddd559fc172a4a911371bda515ce3, type: 3}
     - target: {fileID: 5163789340849987665, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: waitUntilOpen
       value: 
@@ -22203,6 +22211,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Unknown Number
       objectReference: {fileID: 0}
+    - target: {fileID: 2270205683208820382, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f1ddd559fc172a4a911371bda515ce3, type: 3}
     - target: {fileID: 2443005557290711677, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -25130,6 +25142,22 @@ PrefabInstance:
     - target: {fileID: 57671262957042912, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: message.messages.Array.data[2].message
       value: message from riley
+      objectReference: {fileID: 0}
+    - target: {fileID: 2270205683208820382, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f1ddd559fc172a4a911371bda515ce3, type: 3}
+    - target: {fileID: 2270205683208820382, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2270205683208820382, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2270205683208820382, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2443005557290711677, guid: 4a3c62d50092101489a0c8a839b85f70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
