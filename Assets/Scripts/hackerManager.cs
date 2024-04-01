@@ -27,7 +27,7 @@ public class hackerManager : MonoBehaviour
 
     public void startSpamMSG()
     {
-        
+        i = 0;
         InvokeRepeating("spawnSpamMsgs", 0, spawnRate);
     }
     
@@ -51,6 +51,7 @@ public class hackerManager : MonoBehaviour
     public void endSpamMsgs()
     {
         CancelInvoke("spawnSpamMsgs");
+        
     }
     public void lag()
     {

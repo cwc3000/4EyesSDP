@@ -8,6 +8,7 @@ public class messageTrigger : MonoBehaviour
     public MessageHolder message;
     public GameObject choicesObj;
     public GameObject messageNotif;
+    //public Button thisButton;
     public bool isRiley;
     //public messageManager mM;
     void Start()
@@ -21,18 +22,23 @@ public class messageTrigger : MonoBehaviour
         if (FindObjectOfType<messageManager>().finishedMessage == true)
         {
             choicesObj.SetActive(true);
+            //thisButton.interactable = false;
+            //Destroy(this);
         }
     }
 
     public void activateMsgNotif()
     {
         messageNotif.SetActive(true);
+        //thisButton.interactable = true;
     }
 
     public void triggerMessage()
     {
-        messageNotif.SetActive(false);
         FindObjectOfType<messageManager>().StartMessage(message);
+        messageNotif.SetActive(false);
+        choicesObj.SetActive(false);
+        
            
 
     }

@@ -20,12 +20,10 @@ public class messageManager : MonoBehaviour
     public GameObject contentArea;
 
     public bool finishedMessage;
-    //private bool isRiley;
-    //public bool isOther;
+
     private List<Message> messages = new List<Message>();
     GameObject newMessageBox = null;
 
-    //[SerializeField] Button[] senderTriggers;
 
 
 
@@ -35,32 +33,10 @@ public class messageManager : MonoBehaviour
     }
     void Start()
     {
-        //messages = new List<Message>();
-        
-        //foreach (Button sender in senderTriggers)
-        //{
-        //    Button sndr = sender;
-        //    sender.onClick.AddListener(() => TaskOnClick(sender));
 
-        //}
 
     }
 
-    //void TaskOnClick(Button sndr)
-    //{
-    //    if (sndr.tag == "rileyMSG")
-    //    {
-    //        isRiley = true;
-    //        isOther = false;
-    //        //Debug.Log(isRiley);
-    //    }
-    //    if (sndr.tag == "otherMSG")
-    //    {
-    //        isRiley = false;
-    //        isOther = true;
-    //        //Debug.Log(isOther);
-    //    }
-    //}
 
 
     void Update()
@@ -88,7 +64,6 @@ public class messageManager : MonoBehaviour
         foreach (Message message in Message.messages)
         {
             messages.Add(message);
-            //isRiley = message.isRiley;
         }
 
         //StartCoroutine(waitSeconds());
@@ -141,7 +116,7 @@ public class messageManager : MonoBehaviour
         CancelInvoke("DisplayNextMessage");
         finishedMessage = true;
         
-        Debug.Log("finished message" + finishedMessage);
+        //Debug.Log("finished message" + finishedMessage);
         //isRiley = false;
         //isOther = false;
         //newMessageBox.GetComponent<Animator>().SetBool("isOpen", true);

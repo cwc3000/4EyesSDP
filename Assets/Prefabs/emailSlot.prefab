@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Riley Chavez
+    characterExpression: {fileID: 0}
     sentences:
     - "*Sigh* I don\u2019t want to look at this anymore."
     - "I can\u2019t believe they would suspend me when I\u2019m so close to solving
@@ -428,7 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.9496855, g: 0.17022654, b: 0.17022654, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

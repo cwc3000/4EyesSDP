@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.9496855, g: 0.17022654, b: 0.17022654, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -301,6 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 0}
   notif: {fileID: 6350105929133871429}
+  showNotif: 0
 --- !u!114 &57671262957042912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,8 +316,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message:
     messages:
-    - message 1
-    - message 2
+    - message: 
+      isRiley: 0
+    - message: 
+      isRiley: 0
+  choicesObj: {fileID: 0}
+  messageNotif: {fileID: 0}
+  isRiley: 0
 --- !u!1 &7941633848640981366
 GameObject:
   m_ObjectHideFlags: 0
