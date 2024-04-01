@@ -10,6 +10,12 @@ public class messageTrigger : MonoBehaviour
     public GameObject messageNotif;
     //public Button thisButton;
     public bool isRiley;
+
+    public bool fromStonewall = false;
+    public bool fromDetectiveFriend = false;
+    public bool fromHacker = false;
+
+    //public GameObject messageArea;
     //public messageManager mM;
     void Start()
     {
@@ -35,6 +41,17 @@ public class messageTrigger : MonoBehaviour
 
     public void triggerMessage()
     {
+        // 0 is stonewall, 1 is detective friend, 2 is hacker, 3 is auntie, 4 is father, 5 is nia
+
+        if (fromStonewall)
+        {
+            FindObjectOfType<messageManager>().contentAreaInt = 0;
+        }
+        else if (fromDetectiveFriend)
+        {
+            FindObjectOfType<messageManager>().contentAreaInt = 1;
+        }
+
         FindObjectOfType<messageManager>().StartMessage(message);
         messageNotif.SetActive(false);
         choicesObj.SetActive(false);
