@@ -15,7 +15,7 @@ public class dialogueManager : MonoBehaviour
     public float textSpeed = 0.02f;
     public GameObject waitUntilOpen;
 
-    public GameObject canvas;
+    //public GameObject canvas;
 
     private Queue<string> sentences = new Queue<string>();
 
