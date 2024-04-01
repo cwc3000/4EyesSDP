@@ -10,11 +10,9 @@ public class dropDownWebpage : MonoBehaviour
     public GameObject socMed;
     public TMP_Dropdown webpages;
     public GameObject webBrowser;
-    GameObject homeTab;
-    GameObject NYWNTab;
-    GameObject socMedTab;
-    private int clickNum;
-    private int pageNum;
+    public GameObject homeTab;
+    public GameObject NYWNTab;
+    public GameObject socMedTab;
     
     List<string> newsOption = new List<string> { "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com" };
     List<string> socMedOption = new List<string> { "<b>YourFace</b>     www.yourFace.com" };
@@ -23,42 +21,67 @@ public class dropDownWebpage : MonoBehaviour
 
     void Start()
     {
-        //clickNum = 0;
-        homeTab = GameObject.FindGameObjectWithTag("homeWebTab");
-        NYWNTab = GameObject.FindGameObjectWithTag("NYWNWebTab");
-        socMedTab = GameObject.FindGameObjectWithTag("socMedTab");
-        NYWNTab.SetActive(false);
-        socMedTab.SetActive(false);
-        //pageNum = webpages.value;
+        //homeTab = GameObject.FindGameObjectWithTag("homeWebTab");
+        //NYWNTab = GameObject.FindGameObjectWithTag("NYWNWebTab");
+        //socMedTab = GameObject.FindGameObjectWithTag("socMedTab");
+        //NYWNTab.SetActive(false);
+        //socMedTab.SetActive(false);
     }
 
     public void changeWebpages(int value)
     {
-        if(value == 0)
+        if(value == 0) //homepage
         {
             homePage.SetActive(true);
+            homePage.transform.SetAsLastSibling();
             homeTab.SetActive(true);
             newsLetter.SetActive(false);
             socMed.SetActive(false);
         }
 
-        if(value == 1)
+        if(value == 1) //newsletter page
         {
-            Debug.Log(value);
-            newsLetter.SetActive(true);
-            NYWNTab.SetActive(true);
-            homePage.SetActive(false);
-            socMed.SetActive(false);
+            if (webpages.options[1].text == "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com")
+            {
+                showNYWNPage();
+            }
+            else if (webpages.options[1].text == "<b>YourFace</b>     www.yourFace.com")
+            {
+                showSocMedPage();
+            }
+
         }
-        if (value == 2)
+        if (value == 2) //yourface page
         {
-            socMed.SetActive(true);
-            socMedTab.SetActive(true);
-            newsLetter.SetActive(false);
-            homePage.SetActive(false);
+            if (webpages.options[2].text == "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com")
+            {
+                showNYWNPage();
+            }
+            else if (webpages.options[2].text == "<b>YourFace</b>     www.yourFace.com")
+            {
+                showSocMedPage();
+            }
         }
         //case 0: homePage.SetActive(true); newsLetter.SetActive(false); break;
         //case 1: newsLetter.SetActive(true); homePage.SetActive(false); break;
+    }
+
+    public void showNYWNPage()
+    {
+        newsLetter.SetActive(true);
+        newsLetter.transform.SetAsLastSibling();
+        //NYWNTab.SetActive(true);
+        homePage.SetActive(false);
+        socMed.SetActive(false);
+    }
+
+    public void showSocMedPage()
+    {
+        socMed.SetActive(true);
+        socMed.transform.SetAsLastSibling();
+        //socMedTab.SetActive(true);
+        newsLetter.SetActive(false);
+        homePage.SetActive(false);
     }
 
     public void goHomePage()
@@ -71,27 +94,20 @@ public class dropDownWebpage : MonoBehaviour
 
     public void activateNewsPage()
     {
-        clickNum = 1;
         webBrowser.SetActive(true);
         webBrowser.transform.SetAsLastSibling();
-        if (clickNum == 1)
-        {
-            webpages.AddOptions(newsOption);
+        webpages.AddOptions(newsOption);
             //newsOption = new Dropdown.OptionData();
             //newsOption.text = "News";
             //newsLetter.SetActive(true);
-        }
-        webpages.value = 1;
+        webpages.value = webpages.options.FindIndex(option => option.text == "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com");
+        
     }
     public void activateSocMed()
     {
-        clickNum = 2;
         webBrowser.SetActive(true);
         webBrowser.transform.SetAsLastSibling();
-        if (clickNum == 2)
-        {
-            webpages.AddOptions(socMedOption);
-        }
-        webpages.value = 2;
+        webpages.AddOptions(socMedOption);
+        webpages.value = webpages.options.FindIndex(option => option.text == "<b>YourFace</b>     www.yourFace.com");
     }
 }

@@ -20,7 +20,7 @@ public class messageManager : MonoBehaviour
     public GameObject contentArea;
 
     public bool finishedMessage;
-    private bool isRiley;
+    //private bool isRiley;
     //public bool isOther;
     private List<Message> messages = new List<Message>();
     GameObject newMessageBox = null;
@@ -110,11 +110,11 @@ public class messageManager : MonoBehaviour
 
         if (message.isRiley)
         {
-            Debug.Log(isRiley);
+            //Debug.Log(isRiley);
             newMessageBox = Instantiate(rileyMessage, contentArea.transform);
             newMessageBox.SetActive(true);
             newMessageBox.GetComponentInChildren<Animator>().SetBool("isOpen", true);
-
+            //newMessageBox.GetComponentInChildren<Animator>().keepAnimatorStateOnDisable;
             // set the new message box's text component to include the actual message it should print
             newMessageBox.GetComponentInChildren<TMP_Text>().text = message.message;
         }
