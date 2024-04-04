@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 8387438432267519247}
   - component: {fileID: 4215771076820466242}
   m_Layer: 5
-  m_Name: msgTab_Stonewall
+  m_Name: msgTab
   m_TagString: email
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

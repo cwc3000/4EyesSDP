@@ -9,7 +9,7 @@ public class activateMessage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        msgOpened[msgNum].SetActive(false);
     }
 
     // Update is called once per frame

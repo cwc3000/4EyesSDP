@@ -15,6 +15,8 @@ public class messageTrigger : MonoBehaviour
     public bool fromStonewall = false;
     public bool fromDetectiveFriend = false;
     public bool fromHacker = false;
+    
+    public bool clicked = false;
 
     //public GameObject messageArea;
     //public messageManager mM;
@@ -26,7 +28,7 @@ public class messageTrigger : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (FindObjectOfType<messageManager>().finishedMessage == true)
+        if (FindObjectOfType<messageManager>().finishedMessage == true && clicked)
         {
             choicesObj.SetActive(true);
             Destroy(messageAlert);
@@ -53,7 +55,7 @@ public class messageTrigger : MonoBehaviour
         FindObjectOfType<messageManager>().StartMessage(message);
         messageNotif.SetActive(false);
         messageAlert.GetComponentInChildren<Image>().enabled = false;
-
+        clicked = true;
     }
 
 }

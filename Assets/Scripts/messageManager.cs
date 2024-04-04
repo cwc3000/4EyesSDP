@@ -62,6 +62,7 @@ public class messageManager : MonoBehaviour
     public void StartMessage(MessageHolder Message)
     {
         messages.Clear();
+        finishedMessage = false;
 
         foreach (Message message in Message.messages)
         {
@@ -117,7 +118,6 @@ public class messageManager : MonoBehaviour
     {
         CancelInvoke("DisplayNextMessage");
         finishedMessage = true;
-        
         //Debug.Log("finished message" + finishedMessage);
         //isRiley = false;
         //isOther = false;
