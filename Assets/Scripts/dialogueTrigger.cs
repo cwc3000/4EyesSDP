@@ -12,6 +12,7 @@ public class dialogueTrigger : MonoBehaviour
     
     public bool playOnceOnly = false;
     public GameObject activateDialogue;
+    public GameObject[] prohibitProgression;
 
     public bool isDelay = false;
     public GameObject waitUntilOpen;
@@ -27,6 +28,15 @@ public class dialogueTrigger : MonoBehaviour
             timerReached = true;
             triggerDialogue(); 
         }
+
+        if (waitUntilOpen.activeInHierarchy == true)
+        {
+            Destroy(prohibitProgression[0]);
+            Destroy(prohibitProgression[1]);
+            Destroy(prohibitProgression[2]);
+            Destroy(prohibitProgression[3]);
+            Destroy(prohibitProgression[4]);
+        }
     }
     public void triggerDialogue()
     {
@@ -36,6 +46,7 @@ public class dialogueTrigger : MonoBehaviour
         {
             Destroy(activateDialogue);
         }
+        //else 
 
     }
     

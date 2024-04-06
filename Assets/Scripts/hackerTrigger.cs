@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class hackerTrigger : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,8 @@ public class hackerTrigger : MonoBehaviour
     }
     public void triggerHacker()
     {
-        FindObjectOfType<hackerManager>().startSpamMSG();
+        hackerManager HackerManager = FindObjectOfType<hackerManager>();
+        HackerManager.InvokeRepeating("startSpamMSG", 0, Random.Range(15, 60));
+        //FindObjectOfType<hackerManager>().startSpamMSG();
     }
 }
