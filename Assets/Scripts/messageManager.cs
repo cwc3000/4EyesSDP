@@ -13,19 +13,19 @@ public class messageManager : MonoBehaviour
     public GameObject otherMessage;
     public GameObject rileyMessage;
 
-    public GameObject[] contentAreas;
-    public int contentAreaInt;
-    // 0 is stonewall, 1 is detective friend, 2 is hacker, 3 is auntie, 4 is father, 5 is nia
+    
 
     public float textSpeed = 0.02f;
 
-    //public GameObject contentArea;
+    public GameObject contentArea;
 
     public bool finishedMessage;
-
+    //private bool isRiley;
+    //public bool isOther;
     private List<Message> messages = new List<Message>();
     GameObject newMessageBox = null;
 
+    //[SerializeField] Button[] senderTriggers;
 
 
 
@@ -35,10 +35,32 @@ public class messageManager : MonoBehaviour
     }
     void Start()
     {
+        //messages = new List<Message>();
+        
+        //foreach (Button sender in senderTriggers)
+        //{
+        //    Button sndr = sender;
+        //    sender.onClick.AddListener(() => TaskOnClick(sender));
 
+        //}
 
     }
 
+    //void TaskOnClick(Button sndr)
+    //{
+    //    if (sndr.tag == "rileyMSG")
+    //    {
+    //        isRiley = true;
+    //        isOther = false;
+    //        //Debug.Log(isRiley);
+    //    }
+    //    if (sndr.tag == "otherMSG")
+    //    {
+    //        isRiley = false;
+    //        isOther = true;
+    //        //Debug.Log(isOther);
+    //    }
+    //}
 
 
     void Update()
@@ -62,13 +84,13 @@ public class messageManager : MonoBehaviour
     public void StartMessage(MessageHolder Message)
     {
         messages.Clear();
-        finishedMessage = false;
 
         foreach (Message message in Message.messages)
         {
             messages.Add(message);
+            //isRiley = message.isRiley;
         }
-        contentAreas[contentAreaInt].transform.parent.transform.parent.SetAsLastSibling();
+
         //StartCoroutine(waitSeconds());
         InvokeRepeating("DisplayNextMessage",0, 3.0f);
     }
@@ -89,7 +111,7 @@ public class messageManager : MonoBehaviour
         if (message.isRiley)
         {
             //Debug.Log(isRiley);
-            newMessageBox = Instantiate(rileyMessage, contentAreas[contentAreaInt].transform);
+            newMessageBox = Instantiate(rileyMessage, contentArea.transform);
             newMessageBox.SetActive(true);
             newMessageBox.GetComponentInChildren<Animator>().SetBool("isOpen", true);
             //newMessageBox.GetComponentInChildren<Animator>().keepAnimatorStateOnDisable;
@@ -100,7 +122,7 @@ public class messageManager : MonoBehaviour
         {
             Debug.Log("not Riley");
             // create a new text message box to correct area, and then set it to open so it plays the message pop up animation
-            newMessageBox = Instantiate(otherMessage, contentAreas[contentAreaInt].transform);
+            newMessageBox = Instantiate(otherMessage, contentArea.transform);
             newMessageBox.SetActive(true);
             //newMessageBox.GetComponent<Animator>().SetBool("isStay", true); 
             newMessageBox.GetComponentInChildren<Animator>().SetBool("isOpen", true);
@@ -118,7 +140,8 @@ public class messageManager : MonoBehaviour
     {
         CancelInvoke("DisplayNextMessage");
         finishedMessage = true;
-        //Debug.Log("finished message" + finishedMessage);
+        
+        Debug.Log("finished message" + finishedMessage);
         //isRiley = false;
         //isOther = false;
         //newMessageBox.GetComponent<Animator>().SetBool("isOpen", true);

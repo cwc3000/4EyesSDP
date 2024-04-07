@@ -8,14 +8,14 @@ using Unity.VisualScripting;
 
 public class dialogueManager : MonoBehaviour
 {
-    //public TMP_Text nameText;
+    public TMP_Text nameText;
     public TMP_Text dialogueText;
     public Image charaExpression;
     public Animator animator;
     public float textSpeed = 0.02f;
     public GameObject waitUntilOpen;
 
-    //public GameObject canvas;
+    public GameObject canvas;
 
     private Queue<string> sentences = new Queue<string>();
 
@@ -51,7 +51,7 @@ public class dialogueManager : MonoBehaviour
 
         animator.SetBool("isOpen", true);
 
-        //nameText.text = dialogue.name;
+        nameText.text = dialogue.name;
         charaExpression.sprite = dialogue.characterExpression;
 
         sentences.Clear();

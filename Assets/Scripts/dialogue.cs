@@ -14,7 +14,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public class dialogue
 {
-    //public string name;
+    public string name;
     public Sprite characterExpression;
     [TextArea(3,10)]
     public string[] sentences;
