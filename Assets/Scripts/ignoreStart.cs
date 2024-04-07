@@ -14,11 +14,21 @@ public class ignoreStart : MonoBehaviour
     GameObject NYWN;
     GameObject objs;
     private TMP_Dropdown webpages;
+    public bool startOpened = true;
+
     //GameObject selfTab;
     // Start is called before the first frame update
     void Start()
     {
-        ignOpened.SetActive(true);
+        if (startOpened)
+        {
+            ignOpened.SetActive(true);
+        }
+        else if (!startOpened)
+        {
+            ignOpened.SetActive(false);
+        }
+        
         homePage = GameObject.FindGameObjectWithTag("home");
         NYWN = GameObject.FindGameObjectWithTag("newsletter");
         objs = GameObject.FindGameObjectWithTag("objs");
