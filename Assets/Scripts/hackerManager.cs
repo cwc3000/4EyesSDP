@@ -49,7 +49,7 @@ public class hackerManager : MonoBehaviour
     {
 
         //for (var i = 0; i < 6; i++){
-        spamRandomizer = Random.Range(0, 3);
+        spamRandomizer = Random.Range(0, 4);
 
         if (i == spamNum)
         {
