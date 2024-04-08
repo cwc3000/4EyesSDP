@@ -6,6 +6,7 @@ public class activateMessage : MonoBehaviour
 {
     public GameObject[] msgOpened;
     public int msgNum = 1;
+    public GameObject[] preMadeMsgs;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,4 +33,13 @@ public class activateMessage : MonoBehaviour
         msgOpened[msgNum].SetActive(true);
         msgOpened[msgNum].transform.SetAsLastSibling();
     }
+
+    public void openPreMadeMsg()
+    {
+        msgOpened[0].SetActive(true);
+        msgOpened[0].transform.SetAsLastSibling();
+        foreach (GameObject preMadeMsg in preMadeMsgs)
+        preMadeMsg.GetComponentInChildren<Animator>().SetBool("isOpen", true);
+    }
+
 }
