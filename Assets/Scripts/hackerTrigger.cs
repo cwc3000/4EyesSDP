@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class hackerTrigger : MonoBehaviour
 {
-    
+    public GameObject warningMSG;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +17,28 @@ public class hackerTrigger : MonoBehaviour
     {
         
     }
+    
     public void triggerHacker()
     {
         hackerManager HackerManager = FindObjectOfType<hackerManager>();
-        HackerManager.InvokeRepeating("startSpamMSG", 0, Random.Range(15, 60));
-        //FindObjectOfType<hackerManager>().startSpamMSG();
+        HackerManager.InvokeRepeating("startSpamMSG", 1, Random.Range(15, 45));
+        HackerManager.InvokeRepeating("glitchStart", 0, Random.Range(15, 60));
+    }
+    
+    public void triggerSpam()
+    {
+        hackerManager HackerManager = FindObjectOfType<hackerManager>();
+        HackerManager.InvokeRepeating("startSpamMSG", 1, Random.Range(15, 45));
+    }
+
+    public void triggerGlitch()
+    {
+        hackerManager HackerManager = FindObjectOfType<hackerManager>();
+        HackerManager.InvokeRepeating("glitchStart", 0, Random.Range(15, 60));
+        if (FindObjectOfType<hackerManager>().playedOnce)
+        {
+            CancelInvoke("glitchStart");
+            warningMSG.SetActive(true);
+        }
     }
 }
