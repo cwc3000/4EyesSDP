@@ -9,7 +9,7 @@ public class activateSocMed : MonoBehaviour
     public bool wasOpened = false;
     public GameObject auntUpdateObj;
     public GameObject auntMsgNotif;
-    public Image auntPFP;
+    public Image[] auntPFP;
     public Sprite newAuntPFP;
     //public GameObject iconNotif;
 
@@ -28,7 +28,9 @@ public class activateSocMed : MonoBehaviour
     {
         if (HackerManager.startedHack && wasOpened)
         {
+            
             auntUpdate();
+            
         }
     }
 
@@ -41,10 +43,12 @@ public class activateSocMed : MonoBehaviour
 
     public void auntUpdate()
     {
+        wasOpened = false;
         auntMsgNotif.SetActive(true);
         auntUpdateObj.SetActive(true);
-        auntPFP.sprite = newAuntPFP;
-
+        auntPFP[0].sprite = newAuntPFP;
+        auntPFP[1].sprite = newAuntPFP;
+        
         //iconNotif.SetActive(true);
         //iconNotif.GetComponent<Animator>().SetBool("open", true);
 
