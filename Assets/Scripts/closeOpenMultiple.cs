@@ -7,6 +7,7 @@ public class closeOpenMultiple : MonoBehaviour
     public GameObject[] closedOpened;
     //public bool isOpenAlr = false;
     public bool bringToFront = false;
+    public bool destroy = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,10 @@ public class closeOpenMultiple : MonoBehaviour
     {
         closedOpened[0].SetActive(false);
         closedOpened[1].SetActive(false);
+        if (destroy)
+        {
+            Destroy(closedOpened[0]);
+        }
     }
     public void OpenAll()
     {

@@ -12,6 +12,7 @@ public class buttonPress : MonoBehaviour
     public bool showNotif = false;
     GameObject homePage;
     GameObject NYWN;
+    public bool setLast = true;
     //public GameObject file;
     // Start is called before the first frame update
     void Start()
@@ -40,9 +41,19 @@ public class buttonPress : MonoBehaviour
     }
     public void open ()
     {
-        objOpened.SetActive(true);
-        clickNum ++;
-        objOpened.transform.SetAsLastSibling();
+        if (setLast)
+        {
+            objOpened.SetActive(true);
+            clickNum++;
+            objOpened.transform.SetAsLastSibling();
+        }
+        else if (!setLast)
+        {
+            objOpened.SetActive(true);
+            clickNum++;
+            //objOpened.transform.SetAsFirstSibling();
+        }
+        
     }
     public void close ()
     {

@@ -110,4 +110,12 @@ public class hackerManager : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(2, 5));
         glitchEnd();
     }
+    public void finalVidGlitch()
+    {
+        digitalGlitch.intensity = 0;
+        analogGlitch.scanLineJitter = 0.05f;
+        analogGlitch.verticalJump = 0.02f;
+        analogGlitch.horizontalShake = 0;
+        analogGlitch.colorDrift = 0.02f;
+    }
 }

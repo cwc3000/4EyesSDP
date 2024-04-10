@@ -24,6 +24,14 @@ public class hackerTrigger : MonoBehaviour
         HackerManager.InvokeRepeating("startSpamMSG", 6, Random.Range(15, 45));
         HackerManager.InvokeRepeating("glitchStart", 0, Random.Range(15, 60));
     }
+
+    public void endHacker()
+    {
+        hackerManager HackerManager = FindObjectOfType<hackerManager>();
+        HackerManager.CancelInvoke("startSpamMSG");
+        HackerManager.CancelInvoke("glitchStart");
+        HackerManager.Invoke("finalVidGlitch", 0);
+    }
     
     public void triggerSpam()
     {
@@ -36,10 +44,5 @@ public class hackerTrigger : MonoBehaviour
         hackerManager HackerManager = FindObjectOfType<hackerManager>();
         HackerManager.Invoke("glitchStart", 0);
         warningMSG.SetActive(true);
-        
-        
-            
-
-
     }
 }
