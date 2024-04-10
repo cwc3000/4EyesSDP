@@ -22,8 +22,8 @@ public class hackerManager : MonoBehaviour
     public DigitalGlitch digitalGlitch;
     public AnalogGlitch analogGlitch;
 
-    public bool playOnlyOnce = false;
-    public bool playedOnce = false;
+    public bool startedHack = false;
+    //public bool playedOnce = false;
 
     //x: 960, 260-1700, 
     //y: 540, 270-700,  Mathf.Pow(startX, 0.3f) - 5*startX
@@ -46,7 +46,7 @@ public class hackerManager : MonoBehaviour
         i = 0;
 
         startX = Random.Range(-700, 700);
-        startY = Random.Range(-100, 370);
+        startY = Random.Range(-100, 350);
         InvokeRepeating("spawnSpamMsgs", 0, spawnRate);
         spamNum = Random.Range(6, 10);
            
@@ -102,10 +102,7 @@ public class hackerManager : MonoBehaviour
         analogGlitch.verticalJump = 0;
         analogGlitch.horizontalShake = 0;
         analogGlitch.colorDrift = 0;
-        if (playOnlyOnce)
-        {
-            playedOnce = true;
-        }
+        startedHack = true;
     }
 
     IEnumerator glitchTime()

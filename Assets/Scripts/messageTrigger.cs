@@ -54,6 +54,7 @@ public class messageTrigger : MonoBehaviour
 
         FindObjectOfType<messageManager>().StartMessage(message);
         messageNotif.SetActive(false);
+        messageAlert.GetComponent<Button>().interactable = false;
         messageAlert.GetComponentInChildren<Image>().enabled = false;
         clicked = true;
     }
