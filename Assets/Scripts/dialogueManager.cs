@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class dialogueManager : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class dialogueManager : MonoBehaviour
     public Image charaExpression;
     public Animator animator;
     public float textSpeed = 0.02f;
-    public GameObject waitUntilOpen;
+    //public GameObject finalAttachment;
+    public bool isFinalDialogue = false;
 
     //public GameObject canvas;
 
@@ -36,10 +38,15 @@ public class dialogueManager : MonoBehaviour
         }
     }
     
-    IEnumerator waitFor()
-    {
-        yield return new WaitForSeconds(3);
-    }
+    //IEnumerator waitFor()
+    //{
+    //    yield return new WaitForSeconds(3);
+    //}
+
+    //public void delayDialogue()
+    //{
+
+    //}
 
     public void StartDialogue(dialogue dialogue)
     {
@@ -61,8 +68,23 @@ public class dialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        DisplayNextSentence();
+        //isFinalDialogue &&
+
+        //if (isFinalDialogue)
+        //{
+        //    StartCoroutine(waitSeconds());
+        //}
+        //else if (!isFinalDialogue)
+        //{
+            DisplayNextSentence();
+        //}
+        
     }
+    //IEnumerator waitSeconds()
+    //{
+    //    yield return new WaitForSeconds(5);
+    //    StartDialogue();
+    //}
 
     public void DisplayNextSentence()
     {
@@ -87,10 +109,7 @@ public class dialogueManager : MonoBehaviour
         }
     }
 
-    //IEnumerator waitSeconds()
-    //{
-    //    yield return new WaitForSeconds(3);
-    //}
+    
 
     void EndDialogue()
     {
@@ -98,5 +117,10 @@ public class dialogueManager : MonoBehaviour
 
         animator.SetBool("isOpen", false);
         Cursor.lockState = CursorLockMode.None;
+
+        if (isFinalDialogue)
+        {
+            SceneManager.LoadScene("End1");
+        }
     }
 }
