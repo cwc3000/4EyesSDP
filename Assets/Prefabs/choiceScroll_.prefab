@@ -162,6 +162,7 @@ MonoBehaviour:
   objOpened: {fileID: 0}
   notif: {fileID: 0}
   showNotif: 0
+  setLast: 1
 --- !u!114 &9070841090504549235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +181,8 @@ MonoBehaviour:
       isRiley: 1
     - message: Understood. I will update you if anything else arrives.
       isRiley: 0
-  choicesObj: {fileID: 0}
+  choicesObj:
+  - {fileID: 0}
   messageAlert: {fileID: 0}
   messageNotif: {fileID: 0}
   fromStonewall: 1
@@ -539,7 +541,8 @@ MonoBehaviour:
     messages:
     - message: 
       isRiley: 0
-  choicesObj: {fileID: 0}
+  choicesObj:
+  - {fileID: 0}
   messageAlert: {fileID: 0}
   messageNotif: {fileID: 0}
   fromStonewall: 0
