@@ -32,6 +32,8 @@ public class activateMessage : MonoBehaviour
     {
         msgOpened[msgNum].SetActive(true);
         msgOpened[msgNum].transform.SetAsLastSibling();
+        msgOpened[msgNum+1].SetActive(false);
+        //msgOpened[msgNum].SetActive(true);
     }
 
     public void openPreMadeMsg()

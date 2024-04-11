@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class messageTrigger : MonoBehaviour
 {
     public MessageHolder message;
-    public GameObject choicesObj;
+    public GameObject[] choicesObj;
     public GameObject messageAlert;
     public GameObject messageNotif;
     //public Button thisButton;
@@ -22,7 +22,8 @@ public class messageTrigger : MonoBehaviour
     //public messageManager mM;
     void Start()
     {
-        choicesObj.SetActive(false);
+        choicesObj[0].SetActive(false);
+        choicesObj[1].SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class messageTrigger : MonoBehaviour
     {
         if (FindObjectOfType<messageManager>().finishedMessage == true && clicked)
         {
-            choicesObj.SetActive(true);
+            choicesObj[0].SetActive(true);
             Destroy(messageAlert);
         }
     }

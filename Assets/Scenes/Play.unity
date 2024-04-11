@@ -2130,9 +2130,9 @@ RectTransform:
   - {fileID: 1738845861}
   m_Father: {fileID: 1185415061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 579.7102, y: -195}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146032599
@@ -2159,7 +2159,7 @@ MonoBehaviour:
       isRiley: 0
     - message: they're in a much better place now
       isRiley: 0
-  choicesObj: {fileID: 0}
+  choicesObj: []
   messageAlert: {fileID: 0}
   messageNotif: {fileID: 0}
   fromStonewall: 0
@@ -11111,7 +11111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3886011509763518782, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 645
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3886011509763518782, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -11235,7 +11235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5073760594875450362, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 645
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5073760594875450362, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -12000,6 +12000,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 969160919}
     - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
+      propertyPath: choicesObj.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
+      propertyPath: choicesObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 1185415063}
+    - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
+      propertyPath: choicesObj.Array.data[1]
+      value: 
+      objectReference: {fileID: 315112452}
+    - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
       propertyPath: message.messages.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -12021,7 +12033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7171964925051582402, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8387438432267519247, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
       propertyPath: m_Enabled
@@ -14790,6 +14802,7 @@ MonoBehaviour:
   msgOpened:
   - {fileID: 474222891}
   - {fileID: 1458818473}
+  - {fileID: 969160920}
   msgNum: 1
   preMadeMsgs: []
 --- !u!114 &1158373705
@@ -15365,7 +15378,7 @@ PrefabInstance:
       objectReference: {fileID: 1301460090}
     - target: {fileID: 4468741468592235847, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 61.652588
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4468741468592235847, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -15377,7 +15390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591846554703976526, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4660449334811972185, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15397,15 +15410,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5758279829859259779, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5758279829859259779, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5758279829859259779, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.2568859
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6594342656406363340, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_text
@@ -15421,11 +15434,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8579896811773661408, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8579896811773661408, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8579896811773661408, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_SizeDelta.y
@@ -15433,11 +15446,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8579896811773661408, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 579.7102
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8579896811773661408, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8957332816607522116, guid: d4c84ead2245ea3449638a798aad72bb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -15557,7 +15570,7 @@ MonoBehaviour:
       isRiley: 0
     - message: it doesn't concern you so don't pry any further!
       isRiley: 0
-  choicesObj: {fileID: 0}
+  choicesObj: []
   messageAlert: {fileID: 0}
   messageNotif: {fileID: 0}
   fromStonewall: 0
@@ -17960,6 +17973,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
+      propertyPath: choicesObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 591819980768403203}
+    - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
       propertyPath: message.messages.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -20303,6 +20320,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1458818472}
     - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
+      propertyPath: choicesObj.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
+      propertyPath: choicesObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 315112452}
+    - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
+      propertyPath: choicesObj.Array.data[1]
+      value: 
+      objectReference: {fileID: 1185415063}
+    - target: {fileID: 4215771076820466242, guid: a401884d5e25dbc46afe85476b1ccd14, type: 3}
       propertyPath: message.messages.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -20526,7 +20555,7 @@ MonoBehaviour:
     messages:
     - message: aaaa
       isRiley: 1
-  choicesObj: {fileID: 1356021736}
+  choicesObj: []
   messageAlert: {fileID: 0}
   messageNotif: {fileID: 0}
   fromStonewall: 0
@@ -21087,8 +21116,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1017456038}
   m_HandleRect: {fileID: 1017456037}
   m_Direction: 2
-  m_Value: 0.93846154
-  m_Size: 0.92306894
+  m_Value: -0.03076923
+  m_Size: 0.9999929
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -25127,9 +25156,9 @@ RectTransform:
   - {fileID: 1897294392}
   m_Father: {fileID: 1185415061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 579.7102, y: -125}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770845778
@@ -25156,7 +25185,7 @@ MonoBehaviour:
       isRiley: 0
     - message: you wouldn't get it anyways
       isRiley: 0
-  choicesObj: {fileID: 0}
+  choicesObj: []
   messageAlert: {fileID: 0}
   messageNotif: {fileID: 0}
   fromStonewall: 0
@@ -26495,7 +26524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.0018310547}
   m_SizeDelta: {x: 0, y: 279.17}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1880958952
