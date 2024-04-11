@@ -36,10 +36,11 @@ public class activateMessage : MonoBehaviour
 
     public void openPreMadeMsg()
     {
+        // element 0 of msgOpened is used as the content area gameobject
         msgOpened[0].SetActive(true);
         msgOpened[0].transform.SetAsLastSibling();
         foreach (GameObject preMadeMsg in preMadeMsgs)
-        preMadeMsg.GetComponentInChildren<Animator>().SetBool("isOpen", true);
+            preMadeMsg.GetComponentInChildren<Animator>().SetBool("isOpen", true);
     }
 
 }

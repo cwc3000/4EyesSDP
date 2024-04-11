@@ -19,13 +19,13 @@ public class dragObj : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragH
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        offset = parent.position - Input.mousePosition;
+        offset = parent.localPosition - Input.mousePosition;
         parent.transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        parent.position = Input.mousePosition + offset;
+        parent.localPosition = Input.mousePosition + offset;
     }
 
     public void OnEndDrag(PointerEventData eventData)

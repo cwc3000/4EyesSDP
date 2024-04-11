@@ -57,13 +57,13 @@ public class ignoreStart : MonoBehaviour
     {
         ignOpened.SetActive(true);
         ignOpened.transform.SetAsLastSibling();
-        webpages.value = 1;
+        webpages.value = webpages.options.FindIndex(option => option.text == "<b>New York Weekly Newsletter</b>     www.nycnewsupdates.com");
     }
     public void openFromTabSocMed()
     {
         ignOpened.SetActive(true);
         ignOpened.transform.SetAsLastSibling();
-        webpages.value = 2;
+        webpages.value = webpages.options.FindIndex(option => option.text == "<b>YourFace</b>     www.yourFace.com");
     }
 
     public void close()
