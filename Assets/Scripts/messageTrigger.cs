@@ -32,6 +32,7 @@ public class messageTrigger : MonoBehaviour
         if (FindObjectOfType<messageManager>().finishedMessage == true && clicked)
         {
             choicesObj[0].SetActive(true);
+            //choicesObj[1].SetActive(false);
             Destroy(messageAlert);
         }
     }
