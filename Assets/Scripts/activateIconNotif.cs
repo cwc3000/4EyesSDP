@@ -22,6 +22,7 @@ public class activateIconNotif : MonoBehaviour
     public void turnOnNotif()
     {
         iconNotif.SetActive(true);
+        Destroy(this.gameObject);
     }
 
     public void turnOffNotif()
