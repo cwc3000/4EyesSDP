@@ -16978,6 +16978,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
+    - target: {fileID: 6131759750921748695, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 463b66f793fe2dc44a4825b9f76c30dc, type: 3}
+    - target: {fileID: 6131759750921748695, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6508047001305860411, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_text
       value: Thomas K.
@@ -34731,6 +34739,14 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1372306368366943351, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a4292cd62c36b92418edec55783b147b, type: 3}
+    - target: {fileID: 1372306368366943351, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1955076675775770183, guid: da754bbb32245df449d469844affa570, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -35001,8 +35017,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
       propertyPath: m_text
-      value: The Award Ceremony, with Ernie Quinn standing in the middle - <i>Photo
-        Courtesy of Rachel Amari</i>
+      value: The Award Ceremony, Ernie Quinn and Orion - <i>Photo Courtesy of Rachel
+        Amari</i>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_xAdvance
+      value: 564.56995
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_characterCount
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_lastCharacterOfLine
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_totalCharacterCount
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_lineVisibleCharacterCount
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_lastVisibleCharacterOfLine
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078560090641356643, guid: da754bbb32245df449d469844affa570, type: 3}
+      propertyPath: m_InternalTextProcessingArraySize
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 6304675149848091213, guid: da754bbb32245df449d469844affa570, type: 3}
       propertyPath: m_AnchorMax.x
@@ -41104,7 +41160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.61626, y: -20}
+  m_AnchoredPosition: {x: 104.61627, y: -20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978660089
