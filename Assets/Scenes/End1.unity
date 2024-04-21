@@ -1041,6 +1041,7 @@ MonoBehaviour:
   textSpeed: 0.03
   isFinalDialogue: 0
   dialogueFin: 0
+  lockCursor: 0
 --- !u!4 &1769781676
 Transform:
   m_ObjectHideFlags: 0

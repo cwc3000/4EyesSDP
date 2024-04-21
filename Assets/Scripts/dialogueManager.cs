@@ -17,6 +17,7 @@ public class dialogueManager : MonoBehaviour
     //public GameObject finalAttachment;
     public bool isFinalDialogue = false;
     public bool dialogueFin = false;
+    public bool lockCursor = true;
 
     //public GameObject canvas;
 
@@ -56,8 +57,11 @@ public class dialogueManager : MonoBehaviour
         //StartCoroutine(waitSeconds());
         //canvas.GetComponentsInChildren(true)
         dialogueFin = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        
         animator.SetBool("isOpen", true);
 
         //nameText.text = dialogue.name;
