@@ -16,6 +16,7 @@ public class dialogueManager : MonoBehaviour
     public float textSpeed = 0.02f;
     //public GameObject finalAttachment;
     public bool isFinalDialogue = false;
+    public bool dialogueFin = false;
 
     //public GameObject canvas;
 
@@ -54,6 +55,7 @@ public class dialogueManager : MonoBehaviour
 
         //StartCoroutine(waitSeconds());
         //canvas.GetComponentsInChildren(true)
+        dialogueFin = false;
         Cursor.lockState = CursorLockMode.Locked;
 
         animator.SetBool("isOpen", true);
@@ -107,6 +109,7 @@ public class dialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+        dialogueFin = true;
     }
 
     
@@ -114,13 +117,13 @@ public class dialogueManager : MonoBehaviour
     void EndDialogue()
     {
         //Debug.Log("End of convo");
-
+        
         animator.SetBool("isOpen", false);
         Cursor.lockState = CursorLockMode.None;
 
         if (isFinalDialogue)
         {
-            SceneManager.LoadScene("End1");
+            SceneManager.LoadScene("End2");
         }
     }
 }
