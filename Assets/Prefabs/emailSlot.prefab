@@ -163,6 +163,7 @@ MonoBehaviour:
   objOpened: {fileID: 0}
   notif: {fileID: 7606989302473534477}
   showNotif: 0
+  setLast: 1
 --- !u!114 &7083640736164314092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced32825d50000a4e80cb0196c73d323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  expNum: 0
   dialogue:
     characterExpression: {fileID: 0}
     sentences:
@@ -187,6 +189,7 @@ MonoBehaviour:
   prohibitProgression: []
   isDelay: 0
   waitUntilOpen: {fileID: 0}
+  finalDialogue: 0
 --- !u!1 &4658104776046054573
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,17 +306,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Temporary Suspension of Police Detective ...
+  m_text: Updated Information Regarding ...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 095e5bd348d00e44dae57f177d04a199, type: 2}
+  m_sharedMaterial: {fileID: -3109479933629627072, guid: 095e5bd348d00e44dae57f177d04a199, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
