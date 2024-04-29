@@ -165,6 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objOpened: {fileID: 0}
   notif: {fileID: 0}
+  showNotif: 0
+  setLast: 1
 --- !u!1 &2533798919439253829
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,8 +234,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ernie_mis...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 03c484c73e4f5cb47b9dea6e9245eba9, type: 2}
+  m_sharedMaterial: {fileID: 8263757162511622786, guid: 03c484c73e4f5cb47b9dea6e9245eba9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

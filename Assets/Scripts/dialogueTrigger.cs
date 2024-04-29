@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class dialogueTrigger : MonoBehaviour
 {
+    public int expNum;
+    // 0 is neutral, 1 is frustrated, 2 is angry, 3 is shocked, 4 is happy
+
     public dialogue dialogue;
     
     public float delay = 5.0f;
@@ -18,6 +21,7 @@ public class dialogueTrigger : MonoBehaviour
     public GameObject waitUntilOpen;
 
     public bool finalDialogue = false;
+
 
     // for on mouse click event for that which needs a delay
     public void Update()
@@ -43,6 +47,9 @@ public class dialogueTrigger : MonoBehaviour
     public void triggerDialogue()
     {
         dialogueManager DialogueManager = FindObjectOfType<dialogueManager>();
+
+        DialogueManager.expressionNum = expNum;
+
         if (playOnceOnly)
         {
             Destroy(activateDialogue);

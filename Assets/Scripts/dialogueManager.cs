@@ -12,6 +12,9 @@ public class dialogueManager : MonoBehaviour
     //public TMP_Text nameText;
     public TMP_Text dialogueText;
     public Image charaExpression;
+    public Sprite[] expressionSprites;
+    public int expressionNum = 0;
+
     public Animator animator;
     public float textSpeed = 0.02f;
     //public GameObject finalAttachment;
@@ -65,7 +68,7 @@ public class dialogueManager : MonoBehaviour
         animator.SetBool("isOpen", true);
 
         //nameText.text = dialogue.name;
-        charaExpression.sprite = dialogue.characterExpression;
+        charaExpression.sprite = expressionSprites[expressionNum]; // = dialogue.characterExpression;
 
         sentences.Clear();
 

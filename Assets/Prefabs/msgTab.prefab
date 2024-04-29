@@ -436,6 +436,7 @@ MonoBehaviour:
   objOpened: {fileID: 0}
   notif: {fileID: 7092489308632963047}
   showNotif: 0
+  setLast: 1
 --- !u!114 &4215771076820466242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +455,8 @@ MonoBehaviour:
       isRiley: 0
     - message: 
       isRiley: 0
-  choicesObj: {fileID: 0}
+  choicesObj:
+  - {fileID: 0}
   messageAlert: {fileID: 0}
   messageNotif: {fileID: 0}
   fromStonewall: 0
