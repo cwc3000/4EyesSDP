@@ -46,7 +46,7 @@ public class hackerManager : MonoBehaviour
         i = 0;
 
         startX = Random.Range(-700, 700);
-        startY = Random.Range(-100, 350);
+        startY = Random.Range(-100, 250);
         InvokeRepeating("spawnSpamMsgs", 0, spawnRate);
         spamNum = Random.Range(4, 8);
            
