@@ -4056,6 +4056,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 463ccb153475fa641b68b176a10955e8, type: 3}
   expressionNum: 0
   animator: {fileID: 1520740077}
+  dim: {fileID: 2060318280}
   textSpeed: 0.02
   isFinalDialogue: 0
   dialogueFin: 0
@@ -10032,7 +10033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6853ed8bc14f8f489f036cbcb2f0bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoFileName: securityFootageNew_animatic.mp4
+  videoFileName: footage2_final.mp4
   activateVideo: {fileID: 50616561}
 --- !u!328 &526586143
 VideoPlayer:
@@ -17512,6 +17513,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -273.779
       objectReference: {fileID: 0}
+    - target: {fileID: 309926311218758872, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b3908c36b37b49a4f8a06cf937cfbebb, type: 3}
+    - target: {fileID: 309926311218758872, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 309926311218758872, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 309926311218758872, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 309926311218758872, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491127639099672129, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -17787,7 +17808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1215985796158138811, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 217.58002
+      value: 217.58
       objectReference: {fileID: 0}
     - target: {fileID: 1215985796158138811, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18004,7 +18025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1763143437072329805, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 217.58002
+      value: 217.58
       objectReference: {fileID: 0}
     - target: {fileID: 1763143437072329805, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18168,6 +18189,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 4245114571051235629, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7732e52b763e1f34eaed7d273c55faa8, type: 3}
     - target: {fileID: 4310073594355744319, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -18232,7 +18257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783347976877029833, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50.06787
+      value: 50.06785
       objectReference: {fileID: 0}
     - target: {fileID: 4783347976877029833, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18725,7 +18750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6691450470369390694, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 217.58002
+      value: 217.58
       objectReference: {fileID: 0}
     - target: {fileID: 6691450470369390694, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18831,6 +18856,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7497130984780947409, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 04cf5094d16b9304d981bfd449c47136, type: 3}
     - target: {fileID: 7511835726147976980, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -36995,6 +37024,7 @@ GameObject:
   - component: {fileID: 1635879012}
   - component: {fileID: 1635879011}
   - component: {fileID: 1635879010}
+  - component: {fileID: 1635879015}
   m_Layer: 5
   m_Name: UpdatePFP
   m_TagString: Untagged
@@ -37126,6 +37156,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1635879015}
+        m_TargetAssemblyTypeName: dialogueTrigger, Assembly-CSharp
+        m_MethodName: delayDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1635879013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37164,6 +37206,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635879008}
   m_CullTransparentMesh: 1
+--- !u!114 &1635879015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635879008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced32825d50000a4e80cb0196c73d323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expNum: 4
+  dialogue:
+    characterExpression: {fileID: 0}
+    sentences:
+    - Aunt Harley...
+    - She was always so welcoming and kind to us. Her place was almost like a second
+      home.
+    - I should go visit her soon.
+  delay: 1
+  playOnceOnly: 0
+  activateDialogue: {fileID: 0}
+  prohibitProgression: []
+  isDelay: 1
+  waitUntilOpen: {fileID: 0}
+  finalDialogue: 0
 --- !u!1 &1638147111
 GameObject:
   m_ObjectHideFlags: 0
@@ -41034,7 +41103,7 @@ MonoBehaviour:
     sentences:
     - Wait... that couldn't be who I think it is...
     - No way, after all this time-
-  delay: 6
+  delay: 9
   playOnceOnly: 0
   activateDialogue: {fileID: 0}
   prohibitProgression: []
@@ -43287,7 +43356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c709895ff9a442d4eb3b3562c612aeb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoFileName: securityFootage_animatic.mp4
+  videoFileName: footage1_final.mp4
 --- !u!1 &1938883990
 GameObject:
   m_ObjectHideFlags: 0
@@ -46457,6 +46526,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -273.779
       objectReference: {fileID: 0}
+    - target: {fileID: 309926311218758872, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc99561e8f1d1494d85676a41d00b046, type: 3}
     - target: {fileID: 491127639099672129, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -46660,7 +46733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709211951817861471, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -647.1566
+      value: -647.1567
       objectReference: {fileID: 0}
     - target: {fileID: 1763143437072329805, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -46785,6 +46858,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 4245114571051235629, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 038e151edce6b3844a162c5f8dc48e63, type: 3}
     - target: {fileID: 4310073594355744319, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -47030,6 +47107,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4bcd9f7cf3e49354fb3b6e83717a990e, type: 3}
+    - target: {fileID: 7497130984780947409, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 41d88988cf0b6464bb1da0a59c8ae86e, type: 3}
     - target: {fileID: 7511835726147976980, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -52446,6 +52527,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -273.779
       objectReference: {fileID: 0}
+    - target: {fileID: 309926311218758872, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a0d12956a77409a4283f66729048f7ba, type: 3}
     - target: {fileID: 460609949803238086, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -52740,7 +52825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709211951817861471, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -774.94885
+      value: -774.9491
       objectReference: {fileID: 0}
     - target: {fileID: 1763143437072329805, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -52968,6 +53053,10 @@ PrefabInstance:
         be having a sale \nfor the next 10 hours, and if you like and favorite this
         post you'll \nhave a chance to win a free item from my store!\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 4245114571051235629, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5415ddce18b3c9548b722343d2a82954, type: 3}
     - target: {fileID: 4310073594355744319, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -53485,6 +53574,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7497130984780947409, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c691fc88823e7548b990735621bd07d, type: 3}
     - target: {fileID: 7511835726147976980, guid: 4a4ffb7829fa08b4caa740496be4a31b, type: 3}
       propertyPath: m_Type
       value: 0

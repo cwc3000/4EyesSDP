@@ -57,6 +57,7 @@ public class dialogueTrigger : MonoBehaviour
         if (finalDialogue)
         {
             DialogueManager.isFinalDialogue = true;
+            DialogueManager.dim.SetActive(false);
         }
 
         DialogueManager.StartDialogue(dialogue);

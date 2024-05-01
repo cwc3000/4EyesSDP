@@ -1041,6 +1041,7 @@ MonoBehaviour:
   - {fileID: 0}
   expressionNum: 0
   animator: {fileID: 2119735136}
+  dim: {fileID: 1989872170}
   textSpeed: 0.03
   isFinalDialogue: 0
   dialogueFin: 0

@@ -16,12 +16,15 @@ public class dialogueManager : MonoBehaviour
     public int expressionNum = 0;
 
     public Animator animator;
+    public GameObject dim;
+
     public float textSpeed = 0.02f;
     //public GameObject finalAttachment;
     public bool isFinalDialogue = false;
     public bool dialogueFin = false;
     public bool lockCursor = true;
 
+    
     //public GameObject canvas;
 
     private Queue<string> sentences = new Queue<string>();
