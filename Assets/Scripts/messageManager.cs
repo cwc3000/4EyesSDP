@@ -17,7 +17,10 @@ public class messageManager : MonoBehaviour
     public int contentAreaInt;
     // 0 is stonewall, 1 is detective friend, 2 is hacker, 3 is auntie, 4 is father, 5 is nia
 
-    public float textSpeed = 0.02f;
+    //public float textSpeed = 0.02f;
+
+    public AudioSource audioSource2;
+    public AudioClip msgPopupSound;
 
     //public GameObject contentArea;
 
@@ -85,6 +88,9 @@ public class messageManager : MonoBehaviour
         // return next message
         Message message = messages[0];
         messages.RemoveAt(0);
+
+        audioSource2.clip = msgPopupSound;
+        audioSource2.Play();
 
         if (message.isRiley)
         {

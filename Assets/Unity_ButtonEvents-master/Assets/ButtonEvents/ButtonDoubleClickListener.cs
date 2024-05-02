@@ -16,6 +16,9 @@ public class ButtonDoubleClickListener : MonoBehaviour,IPointerClickHandler {
    [Range (0.01f, 0.5f)] public float doubleClickDuration = 0.4f ;
    public UnityEvent onDoubleClick ;
 
+    public AudioClip doubleClickSound;
+    public AudioSource audioSource;
+
    private byte clicks = 0;
     private DateTime firstClickTime;
 
@@ -28,6 +31,9 @@ public class ButtonDoubleClickListener : MonoBehaviour,IPointerClickHandler {
     }
 
    public void OnPointerClick (PointerEventData eventData) {
+        
+        
+
         double elapsedSeconds = (DateTime.Now - firstClickTime).TotalSeconds;
         if (elapsedSeconds > doubleClickDuration)
             clicks = 0;
@@ -39,6 +45,9 @@ public class ButtonDoubleClickListener : MonoBehaviour,IPointerClickHandler {
         else if (clicks > 1) {
             if (elapsedSeconds <= doubleClickDuration) {
                 if (button.interactable)
+                    audioSource.clip = null;
+                    audioSource.clip = doubleClickSound;
+                    audioSource.Play();
                     onDoubleClick?.Invoke();
             }
             clicks = 0;

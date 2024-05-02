@@ -10,6 +10,14 @@ public class hackerManager : MonoBehaviour
     public GameObject contentArea;
     public Sprite[] spamImages;
 
+    public AudioSource staticAudioSource;
+    public AudioSource spamAudioSource;
+    public AudioClip[] staticSounds;
+    public AudioClip[] popupSounds;
+
+    private int staticNum;
+    private int popupNum;
+
     GameObject newSpamBox = null;
     private int i = 0;
     private float spawnRate = 0.1f;
@@ -49,7 +57,7 @@ public class hackerManager : MonoBehaviour
         startY = Random.Range(-100, 250);
         InvokeRepeating("spawnSpamMsgs", 0, spawnRate);
         spamNum = Random.Range(4, 8);
-           
+        popupNum = Random.Range(0, 2);
     }
     
     public void spawnSpamMsgs()
@@ -57,13 +65,14 @@ public class hackerManager : MonoBehaviour
 
         //for (var i = 0; i < 6; i++){
         spamRandomizer = Random.Range(0, 4);
-
+        popupNum = Random.Range(0, 2);
         if (i == spamNum)
         {
             endSpamMsgs();
         }
         
-
+        spamAudioSource.clip = popupSounds[popupNum];
+        spamAudioSource.Play();
         //newSpamBox = Instantiate(spamBox, new Vector3(-i*50 + startX, -i*60 + startY, 0), Quaternion.identity, contentArea.transform);
         newSpamBox = Instantiate(spamBox, contentArea.transform);
         newSpamBox.transform.localPosition = new Vector3(-i*50 + startX, -i*60 + startY, 0);
@@ -78,6 +87,7 @@ public class hackerManager : MonoBehaviour
     public void endSpamMsgs()
     {
         CancelInvoke("spawnSpamMsgs");
+        spamAudioSource.Stop();
 
     }
     public void lag()
@@ -87,6 +97,10 @@ public class hackerManager : MonoBehaviour
 
     public void glitchStart()
     {
+        staticNum = Random.Range(0, 3);
+        staticAudioSource.clip = staticSounds[staticNum];
+        staticAudioSource.Play();
+
         digitalGlitch.intensity = Random.Range(0.1f, 0.8f);
         analogGlitch.scanLineJitter = Random.Range(0.1f, 0.7f);
         analogGlitch.verticalJump = Random.Range(0.1f, 0.4f);
@@ -97,6 +111,7 @@ public class hackerManager : MonoBehaviour
 
     public void glitchEnd()
     {
+        staticAudioSource.Stop();
         digitalGlitch.intensity = 0;
         analogGlitch.scanLineJitter = 0;
         analogGlitch.verticalJump = 0;
@@ -107,7 +122,7 @@ public class hackerManager : MonoBehaviour
 
     IEnumerator glitchTime()
     {
-        yield return new WaitForSeconds(Random.Range(2, 5));
+        yield return new WaitForSeconds(Random.Range(2, 4));
         glitchEnd();
     }
     public void finalVidGlitch()
