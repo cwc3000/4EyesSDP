@@ -7,6 +7,9 @@ public class activateIconNotif : MonoBehaviour
 {
     public GameObject iconNotif;
 
+    public AudioSource audioSource2;
+    public AudioClip notifSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,8 @@ public class activateIconNotif : MonoBehaviour
 
     public void turnOnNotif()
     {
+        audioSource2.clip = notifSound;
+        audioSource2.Play();
         iconNotif.SetActive(true);
         Destroy(this.gameObject);
     }
