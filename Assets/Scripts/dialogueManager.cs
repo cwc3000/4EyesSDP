@@ -18,6 +18,10 @@ public class dialogueManager : MonoBehaviour
     public Animator animator;
     public GameObject dim;
 
+    public AudioSource dialogueAudio;
+    public AudioClip[] vocalSounds;
+    private int vocalNum;
+
     public float textSpeed = 0.02f;
     //public GameObject finalAttachment;
     public bool isFinalDialogue = false;
@@ -116,6 +120,9 @@ public class dialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
+            vocalNum = Random.Range(0, 3);
+            dialogueAudio.clip = vocalSounds[vocalNum];
+            dialogueAudio.Play();
             dialogueText.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
