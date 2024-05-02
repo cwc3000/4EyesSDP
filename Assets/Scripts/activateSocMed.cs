@@ -12,6 +12,8 @@ public class activateSocMed : MonoBehaviour
     public Image auntPFP;
     public Sprite newAuntPFP;
     public GameObject iconNotif;
+    public AudioSource audioSource2;
+    public AudioClip notifSound;
 
     hackerManager HackerManager;
     
@@ -47,7 +49,9 @@ public class activateSocMed : MonoBehaviour
         auntMsgNotif.SetActive(true);
         auntUpdateObj.SetActive(true);
         auntPFP.sprite = newAuntPFP;
-        
+
+        audioSource2.clip = notifSound;
+        audioSource2.Play();
         iconNotif.SetActive(true);
         //iconNotif.GetComponent<Animator>().SetBool("open", true);
 
